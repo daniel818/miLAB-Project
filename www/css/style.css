@@ -6,3 +6,13 @@
 .header{
   padding-top: 48px;
 }
+
+.searchBox{
+  display: flex;
+  padding-top:24px;
+  padding-bottom: 24px;
+}
+
+.subHeader{
+  padding-bottom: 12px;
+}

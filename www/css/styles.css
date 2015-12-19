@@ -43,7 +43,7 @@ header.masthead .mh-slider {
 }
 
 #slider {
-  background-image: url(../img/bk.jpg);
+  background-image: url(../img/homeImg.png);
   overflow: hidden;
   background-attachment: fixed;
   position: relative;

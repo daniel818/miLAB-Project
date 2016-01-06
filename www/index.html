@@ -19,6 +19,22 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!--   jQuery is a common JavaScript library for reading and making changes to the
+      Document Object Model (DOM). The DOM is a tree that contains information
+      about what is actually visible on a website.
+
+      While HTML is a static document, the browser converts HTML to the
+      DOM and the DOM can change. In fact, JavaScript's power comes from
+      its ability to manipulate the DOM, which is essentially a JavaScript
+      object. When JavaScript makes something interesting happen on a
+      website, it's likely the action happened because JavaScript changed
+      the DOM. jQuery is fast and easy to use, but it doesn't do anything
+      you can't accomplish with vanilla (regular) JavaScript.-->
+      <script src="js/jQuery.js"></script>
+
+      <!-- More on helper.js in the class -->
+      <script src="js/helper.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
@@ -52,44 +68,26 @@
 
     <!-- Carousel 
     ================================================== -->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="display:none;">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="display:none;">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" id="mentorsTinder" role="listbox">
+    <div class="item active">
+      <div class="carousel-caption">
+        <img src="https://lh6.ggpht.com/n46shVnATYzqcJBKw6r8DHVfyhLyyGWc5C0vukdazqNZgkPNyIp2vAObqTRH3Qnd55RG=w300" alt="Adam">
+        <h1>Mentor Name</h1>
+        <h4>Company</h4>
+        <h3>Job Title</h3>
+        <p>A personal paragraph: "what do you love about your job"</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="carousel-caption">
-        <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAJ2AAAAJDYyNmIxOTc0LTAyYzUtNDNiMC04MjQ0LTMwNDNkMmJlNWMwOQ.jpg" alt="Adam" style="width:300px; height:300px">
-        <h1>Adam Sher</h1>
-        <h4>Beamr</h4>
-        <h3>Head of UX at Beamr</h3>
-        <p>Designed and produced projects for industry leading companies.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="carousel-caption">
-        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/083/173/3ea47e5.jpg" alt="dvirImg">
-        <h1>Dvir Atias</h1>
-        <h4>Cortica</h4>
-        <h3>UX Designer & Consultant</h3>
-        <p>I have a deep interest and great passion for User Experience (UX) and interaction design.</p>
-      </div>
-    </div>
-    <div class="item">
-      <div class="carousel-caption">
-        <img src="https://media.licdn.com/media/p/7/000/204/04c/02970e4.jpg" alt="dvirImg">
-        <h1>Varda Halaby-Senerman</h1>
-        <h4>Ginger Software</h4>
-        <h3>UX Designer</h3>
-        <p>Developing projects from inception through production to final delivery and ongoing updates.</p>
-      </div>
-    </div>
-  </div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

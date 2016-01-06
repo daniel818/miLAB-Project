@@ -31,12 +31,21 @@ function findMentorByJob() {
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      console.log(object.get('name') + ' - ' + object.get('job') + ' - ' + object.get('company') + ' - ' + object.get('paragraph'));
+      appendMentor(object.get('name'),object.get('job'),object.get('company'),object.get('paragraph'),object.get('img'));
     }
   },
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
   }
-});
-document.getElementById("carousel-example-generic").style.display = "inherit";
+  }); 
+  document.getElementById("carousel-example-generic").style.display = "inherit";
+}
+
+function appendMentor(name,job,company,paragraph,img){
+  var formattedMentor = mentorTemplate.replace("%name%", name);
+  formattedMentor = formattedMentor.replace("%job%", job);
+  formattedMentor = formattedMentor.replace("%company%", company);
+  formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
+  formattedMentor = formattedMentor.replace("%img%", img);
+  $("#mentorsTinder").append(formattedMentor);
 }

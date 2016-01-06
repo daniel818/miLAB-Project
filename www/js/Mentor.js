@@ -5,10 +5,10 @@ var Mentor = Parse.Object.extend("Mentor");
 var mentor = new Mentor();
 
 // mentor.save({
-//   name: "test name",
-//   job: "test job",
-//   company: "test company",
-//   paragraph: "testing paragraph"
+//   name: "Dani Bar",
+//   job: "Graphic Designer",
+//   company: "mako",
+//   paragraph: "I'm the coolest ever!"
 // }, {
 //   success: function(mentor) {
 //     alert("The object was saved successfully");
@@ -18,16 +18,16 @@ var mentor = new Mentor();
 //   }
 // });
 
-findMentorbyJob("Jedi");
 
 /* functions */
 
-function findMentorbyJob(job) {
+function findMentorByJob() {
+  var job = document.getElementById("jobSearch").value;
   var query = new Parse.Query(Mentor);
   query.equalTo("job", job);
   query.find({
   success: function(results) {
-    alert("Successfully retrieved " + results.length + " metors");
+    console.log("Successfully retrieved " + results.length + " metors");
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];

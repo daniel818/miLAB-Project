@@ -23,6 +23,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
     <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
 
   <body>
@@ -35,8 +36,9 @@
         <!-- Search Bar -->
         <div class="row">
           <div class="col-lg-offset-3 col-lg-6">
-            <div class="input-group searchBox">
-              <input type="text" class="form-control" placeholder="Search for your Dream Job">
+            <div class="input-group searchBox">             
+              <input type="text" class="form-control" id="jobSearch" placeholder="Search for your Dream Job">
+              <button onclick="findMentorByJob()">search</button>
             </div><!-- /input-group -->
           </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->

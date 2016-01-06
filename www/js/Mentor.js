@@ -27,15 +27,16 @@ function findMentorByJob() {
   query.equalTo("job", job);
   query.find({
   success: function(results) {
-    console.log("Successfully retrieved " + results.length + " metors");
+    console.log("Successfully retrieved" + results.length + " metors");
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      console.log(object.id + ' - ' + object.get('name') + ' - ' + object.get('job') + ' - ' + object.get('company') + ' - ' + object.get('paragraph'));
+      console.log(object.get('name') + ' - ' + object.get('job') + ' - ' + object.get('company') + ' - ' + object.get('paragraph'));
     }
   },
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
   }
 });
+document.getElementById("carousel-example-generic").style.display = "inherit";
 }

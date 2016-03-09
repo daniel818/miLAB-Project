@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type="text/javascript" src="//platform.linkedin.com/in.js">
+	    api_key: 77kifz7aa5sg7s
+	    onLoad: onLinkedInLoad
+	    //authorize: false
+	    //lang:      [LANG_LOCALE]
+	    scope: r_basicprofile r_emailaddress
+	</script>
+	<script type="text/javascript">
+    
+    // Setup an event listener to make an API call once auth is complete
+    function onLinkedInLoad() {
+        IN.Event.on(IN, "auth", getProfileData);
+    }
+
+    // Handle the successful return from the API call
+    function onSuccess(data) {
+        console.log(data);
+    }
+
+    // Handle an error response from the API call
+    function onError(error) {
+        console.log(error);
+    }
+
+    // Use the API call wrapper to request the member's basic profile data
+    function getProfileData() {
+    	var fields = ["id","firstName","lastName","headline","positions","picture-urls::(original)","publicProfileUrl","emailAddress"]
+		IN.API.Profile("me").fields(fields).result(onSuccess).error(onError);
+        document.getElementById("demo").innerHTML = fields[0].value;
+
+	 }
+
+	</script>
+</head>
+<body>
+<h1> Testing Linkedin </h1>
+ <script type="in/Login"></script>
+ <p id="demo">The data will be display in here</p>
+</body>
+</html> 

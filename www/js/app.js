@@ -9,7 +9,6 @@ yodApp.controller('mainController', function($scope) {
 });
 
 yodApp.controller('HomeController', function($timeout ,$scope) {
-    debugger;
     $scope.selectedState = "";
     $scope.states = ["Visual Designer", "Website Coordinator", "Communications Manager", "Editor Copywriter", "Project Manager"];
 });

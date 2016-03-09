@@ -17,6 +17,8 @@
 
     // Handle the successful return from the API call
     function onSuccess(data) {
+    	member = data.values[0];
+        document.getElementById("demo").innerHTML = member.id + "<br>" + member.firstName + "<br>" + member.lastName + "<br>" + member.headline + "<br>" + member.positions.values[0].company.name + "<br>" + member.pictureUrls.values[0] + "<br>" + member.publicProfileUrl + "<br>" + member.emailAddress;
         console.log(data);
     }
 
@@ -29,8 +31,6 @@
     function getProfileData() {
     	var fields = ["id","firstName","lastName","headline","positions","picture-urls::(original)","publicProfileUrl","emailAddress"]
 		IN.API.Profile("me").fields(fields).result(onSuccess).error(onError);
-        document.getElementById("demo").innerHTML = fields[0].value;
-
 	 }
 
 	</script>

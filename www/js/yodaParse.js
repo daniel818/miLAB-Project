@@ -1,5 +1,5 @@
 /*(function(){
-	console.log(tmpl("pledge_tmpl", {name: "dror", url: "http://www.amazon.com"}));
+	console.log(tmpl("pledge_tmpl", {fullName: "dror", url: "http://www.amazon.com"}));
 
 })();*/
 
@@ -8,21 +8,31 @@ Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5
 
 var Mentor = Parse.Object.extend("Mentor");
 
-function saveMentor(category,name,job,company,paragraph,img,mail,linkedinLink) {
+function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLink,linkedinID) {
 	  var mentor = new Mentor();
 	  mentor.save({
 	  category: category,
-	  name: name,
+	  name: fullName,
 	  job: job,
 	  company: company,
 	  paragraph: paragraph,
-	  img: "http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg",
+	  img: img,
 	  mail: mail,
-	  linkedinLink: "https://www.linkedin.com/in/dror-biran-a8095b78",
+	  linkedinLink: linkedinLink,
+    linkedinID : linkedinID,
 	  numMeetings: 0
 	}, {
 	  success: function(mentor) {
-	    alert("The object was saved successfully");
+	    console.log("The Mentor was saved successfully:");
+      console.log(category);
+      console.log(fullName);
+      console.log(job);
+      console.log(company);
+      console.log(paragraph);
+      console.log(img);
+      console.log(mail);
+      console.log(linkedinLink);
+      console.log(linkedinID);
 	  },
 	  error: function(mentor, error) {
 	    alert("The save failed");
@@ -34,10 +44,10 @@ function saveMentor(category,name,job,company,paragraph,img,mail,linkedinLink) {
 
 /* functions */
 
-function findMentorByJob() {
-  var job = document.getElementById("jobSearch").value;
+function findMentorByCategory() {
+  var category = document.getElementById("categorySearch").value;
   var query = new Parse.Query(Mentor);
-  query.equalTo("job", job);
+  query.equalTo("category", category);
   query.find({
   success: function(results) {
     console.log("Successfully retrieved" + results.length + " metors");
@@ -54,10 +64,10 @@ function findMentorByJob() {
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
-function appendMentor(name,job,company,paragraph,img){
-  var formattedMentor = mentorTemplate.replace("%name%", name);
+function appendMentor(fullName,job,company,paragraph,img){
+  var formattedMentor = mentorTemplate.replace("%name%", fullName);
   formattedMentor = formattedMentor.replace("%job%", job);
-  formattedMentor = formattedMentor.replace("%company%", company);
+   formattedMentor = formattedMentor.replace("%company%", company);
   formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
   formattedMentor = formattedMentor.replace("%img%", img);
   $("#mentorsTinder").append(formattedMentor);

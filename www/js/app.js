@@ -35,7 +35,7 @@ yodApp.controller('HelpController', function($scope) {
                 controller:'HomeController as homectrl',
                 templateUrl:'home.html'
             })
-            .when('/edit/:projectId', {
+            .when('/mentors.html', {
                 controller:'MentorsControllers as mentorctrl',
                 templateUrl:'mentors.html'
             })

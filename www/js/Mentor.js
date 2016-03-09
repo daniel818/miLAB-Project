@@ -1,23 +1,33 @@
 
 Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
 
+//Current Mantor fields
+var currentMentor = new Object();
 
+//saving all the data we get from linkedIn
+function saveLinkedinMember(member){
+  currentMentor.linkedinID = member.id;
+  currentMentor.fullName = member.firstName + " " + member.lastName;
+  currentMentor.job = member.headline;
+  currentMentor.company = member.positions.values[0].company.name;
+  currentMentor.img = member.pictureUrls.values[0];
+  currentMentor.linkedinLink = member.publicProfileUrl;
+  currentMentor.mail = member.emailAddress;
+}
+
+
+//saving all mentor details after linkedinlogin and filling the form
 function saveMentorForm(e){
-  console.log('saveMentorForm', e);
   e.preventDefault();
   var category = document.getElementById("category").value;
-  var name = document.getElementById("name").value;
-  var job = document.getElementById("job").value;
-  var company = document.getElementById("company").value;
   var paragraph = document.getElementById("paragraph").value;
-  var img = "http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg";
-  var mail = document.getElementById("mail").value;
-  var linkedinLink = "https://www.linkedin.com/in/dror-biran-a8095b78";
-  saveMentor(category,name,job,company,paragraph,img,mail,linkedinLink);
+  saveMentor(category,currentMentor.fullName,currentMentor.job,currentMentor.company,paragraph,currentMentor.img,currentMentor.mail,currentMentor.linkedinLink,currentMentor.linkedinID);
 }
 
 
 $("#mentorForm").find("button").on("click", saveMentorForm);
+
+
 
 //template helper
 /*(function(){
@@ -49,5 +59,5 @@ $("#mentorForm").find("button").on("click", saveMentorForm);
   };
 })();*/
 
-//console.log(tmpl("dror", {name: "dror", url: "http://www.amazon.com"}));
+//console.log(tmpl("dror", {fullName: "dror", url: "http://www.amazon.com"}));
 

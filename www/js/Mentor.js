@@ -20,14 +20,14 @@ function saveMentorForm(e){
 $("#mentorForm").find("button").on("click", saveMentorForm);
 
 //template helper
-(function(){
+/*(function(){
   var cache = {};
   this.tmpl = function tmpl(str, data){
     // Figure out if we're getting a template, or if we need to
     // load the template - and be sure to cache the result.
     var fn = !/\W/.test(str) ?
       cache[str] = cache[str] ||
-        tmpl(document.getElementById(dror).innerHTML) :
+        tmpl(document.getElementById("#dror").innerHTML) :
       // Generate a reusable function that will serve as a template
       // generator (and which will be cached).
       new Function("obj",
@@ -47,7 +47,7 @@ $("#mentorForm").find("button").on("click", saveMentorForm);
     // Provide some basic currying to the user
     return data ? fn( data ) : fn;
   };
-})();
+})();*/
 
-console.log(tmpl("dror", {name: "dror", url: "http://www.amazon.com"}));
+//console.log(tmpl("dror", {name: "dror", url: "http://www.amazon.com"}));
 

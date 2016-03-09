@@ -1,0 +1,94 @@
+
+<!-- Jumbotron -->
+<div class="mainCover jumbotron">
+    <div class="container">
+        <h1 class="text-center header">Yodapp</h1>
+        <h2 class="text-center subHeader">Experience A Day At Your Future Job</h2>
+
+        <!-- Search Bar -->
+        <div class="row">
+            <div class="col-lg-offset-3 col-lg-6">
+                <div class="searchBox">
+                    <input type="text" class="form-control" id="jobSearch" ng-model="selectedState" bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
+                    <button onclick="findMentorByJob()">search</button>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <!--  End Search Bar -->
+
+        <p class="text-center"> Want to be a mentor ? <a href="http://img.memecdn.com/yoda-master_o_184950.jpg"> Click Here! </a> </p>
+
+    </div>
+</div><!-- /.Jumbotron -->
+
+
+<!-- Carousel
+================================================== -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="display:none;">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" id="mentorsTinder" role="listbox">
+        <div class="item active">
+            <div class="carousel-caption">
+                <img src="http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg" alt="mentorImg" style="width:200px; height:200px;">
+                <h1>Mentor Name</h1>
+                <h4>Company</h4>
+                <h3>Job Title</h3>
+                <p>A personal paragraph: "what do you love about your job"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Controls -->
+    <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- End of Carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing myMarketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Search</h2>
+            <p>Search for your Dream Job</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Choose</h2>
+            <p>Browse a Mentor and choose</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+            <h2>Meet</h2>
+            <p>Set up a meeting with the Mentor</p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="http://www.quickmeme.com/img/1a/1a7c8c80d5f253113551e29fb266720f603d2d0f4a124266fb81c4bbe38cb069.jpg">Back to top</a></p>
+        <p>&copy; 2015 Yoda Milab-IDC &middot; <a href="https://s-media-cache-ak0.pinimg.com/736x/bd/d2/3c/bdd23c14fb39340d48b0d6f9ec29688b.jpg">Privacy</a> &middot; <a href="http://s.quickmeme.com/img/44/44dea24ec92369a4f57c36f9827db52fcc01f4d1c488da5a4c0189658fee254d.jpg">Terms</a></p>
+    </footer>
+
+</div><!-- /.container -->
+<!-- Bootstrap core JavaScript
+================================================== -->

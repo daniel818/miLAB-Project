@@ -24,3 +24,7 @@
 .myMarketing{
 	margin-top: 30px;
 }
+
+.y-input-group {
+    display: flex;
+}

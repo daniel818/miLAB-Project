@@ -27,7 +27,7 @@
       scope: r_basicprofile r_emailaddress
     </script>
     <script type="text/javascript">
-    
+
     // Setup an event listener to make an API call once auth is complete
     function onLinkedInLoad() {
         IN.Event.on(IN, "auth", getProfileData);
@@ -37,7 +37,7 @@
     function onSuccess(data) {
       console.log(data);
       member = data.values[0];
-      saveLinkedinMember(member);    
+      saveLinkedinMember(member);
     }
 
     // Handle an error response from the API call
@@ -58,12 +58,17 @@
     <!-- Jumbotron -->
     <div class="mainCover jumbotron">
       <div class="container">
-      <h1 class="text-center header">Yodapp Mentors</h1>
-      <div class="container">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Become a Mentor</button>
+          <h1 class="text-center header">Yodapp Mentors</h1>
+          <!--video-->
+          <div class="mentorsVideo embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ToOwALsME1A"></iframe>
+          </div>
+          <!--button-->
+          <div class="container">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Become a Mentor</button>
+          </div>
+          <p class="text-center"> I am actually looking for a mentor... <a href="index.html"> Click Here! </a> </p>
       </div>
-      <p class="text-center"> I am actually looking for a mentor... <a href="index.html"> Click Here! </a> </p>
-    </div>
     </div>
     <!-- /.Jumbotron -->
 
@@ -79,7 +84,7 @@
             </div>
             <div class="form-group">
               <label for="mail">What do you love about your profession?</label>
-              <textarea class="form-control" id="paragraph" rows="4">I love to start from skretch and create amazing websites</textarea>      
+              <textarea class="form-control" id="paragraph" rows="4">I love to start from skretch and create amazing websites</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

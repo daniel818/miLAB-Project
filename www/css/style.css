@@ -1,9 +1,10 @@
-.body {
-  padding-bottom: 20px;
-
-}
 body {
     background-color: #9fd2c0 !important;
+    padding-bottom: 20px;
+}
+
+.mentorsVideo {
+    margin-bottom: 24px;
 }
 
 .profileImg {

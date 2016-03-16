@@ -6,6 +6,11 @@ body {
     background-color: #9fd2c0;
 }
 
+.profileImg {
+    width: 140px;
+}
+
+
 .header{
   padding-top: 48px;
 }

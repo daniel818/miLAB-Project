@@ -29,12 +29,13 @@
         <a href="<%=url%>"><%=name%></a>
       </script>-->
 </head>
-<body>
+<body style="background-color: #9fd2c0" onload="loadMentorProfile()">
     <div class="carousel-caption mentorProfileDiv">
-        <img src="%img%" alt="mentorImg" style="width:200px; height:200px;">
-        <h1>%name%</h1>
-        <h4>%company%</h4>
-        <h3>%job%</h3><p>%paragraph%</p>
+        <img id="img" src="" alt="mentorImg" style="width:200px; height:200px;">
+        <h1 id="name"></h1>
+        <h4 id="company"></h4>
+        <h3 id="job"></h3>
+        <p id="paragraph"></p>
     </div>
 </body>
 

@@ -20,7 +20,6 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 	  numMeetings: 0
 	}, {
 	  success: function(mentor) {
-      alert("congrats!" + fullName + " You are now a Yodapp Mentor!");
       window.location = "mentorProfile.html" + "?linkedinID=" + currentMentor.linkedinID + "&";
       },
 	  error: function(mentor, error) {
@@ -31,11 +30,15 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 //find mentor bu linkedinID
 function fingMentorByLinkedinID (linkedinID){
     var query = new Parse.Query(Mentor);
-    query.equalTo("LinkedinID", category);
-    query.find({
-        success: function(results) {
-            console.log("I found a mentor: " + object.get('name'));
-            // Do something with the returned Parse.Object values
+    query.equalTo("linkedinID", linkedinID);
+    query.first({
+        success: function(object) {
+            console.log(object.get("name"));
+            document.getElementById('img').src = object.get('img');
+            document.getElementById('name').innerHTML = object.get('name');
+            document.getElementById('company').innerHTML = object.get('company');
+            document.getElementById('job').innerHTML = object.get('job');
+            document.getElementById('paragraph').innerHTML = object.get('paragraph');
         },
         error: function(error) {
             alert("Error: " + error.code + " " + error.message);

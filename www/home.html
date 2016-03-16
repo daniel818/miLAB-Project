@@ -10,13 +10,13 @@
             <div class="col-lg-offset-3 col-lg-6">
                 <div class="searchBox">
                     <input type="text" class="form-control" id="categorySearch" ng-model="selectedState" bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
-                    <button onclick="findMentorByCategory()">search</button>
+                    <button ng-click="findMentorByCategory()">search</button>
                 </div><!-- /input-group -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
         <!--  End Search Bar -->
 
-        <p class="text-center"> Want to be a mentor ? <a href="mentors.html"> Click Here! </a> </p>
+        <p class="text-center"> Want to be a mentor ? <a href="/mentors"> Click Here! </a> </p>
 
     </div>
 </div><!-- /.Jumbotron -->

@@ -28,7 +28,6 @@ function saveMentorForm(e){
   var category = document.getElementById("category").value;
   var paragraph = document.getElementById("paragraph").value;
   saveMentor(category,currentMentor.fullName,currentMentor.job,currentMentor.company,paragraph,currentMentor.img,currentMentor.mail,currentMentor.linkedinLink,currentMentor.linkedinID);
-  //window.location = "mentorProfile.html" + "?linkedinID=" + currentMentor.linkedinID + "&";
 }
 
 //Adding a mentor to the carousel

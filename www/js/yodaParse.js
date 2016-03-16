@@ -16,31 +16,35 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 	  img: img,
 	  mail: mail,
 	  linkedinLink: linkedinLink,
-    linkedinID : linkedinID,
+      linkedinID : linkedinID,
 	  numMeetings: 0
 	}, {
 	  success: function(mentor) {
-      alert("The Mentor was saved successfully:" + category);
-      console.log(category);
-      console.log(fullName);
-      console.log(job);
-      console.log(company);
-      console.log(paragraph);
-      console.log(img);
-      console.log(mail);
-      console.log(linkedinLink);
-      console.log(linkedinID);
-	  },
+      alert("congrats!" + fullName + " You are now a Yodapp Mentor!");
+      window.location = "mentorProfile.html" + "?linkedinID=" + currentMentor.linkedinID + "&";
+      },
 	  error: function(mentor, error) {
 	    alert("The save failed");
 	  }
 	});
 }
+//find mentor bu linkedinID
+function fingMentorByLinkedinID (linkedinID){
+    var query = new Parse.Query(Mentor);
+    query.equalTo("LinkedinID", category);
+    query.find({
+        success: function(results) {
+            console.log("I found a mentor: " + object.get('name'));
+            // Do something with the returned Parse.Object values
+        },
+        error: function(error) {
+            alert("Error: " + error.code + " " + error.message);
+        }
+    });
+}
 
 
-
-/* functions */
-
+//finding mentor by category
 function findMentorByCategory() {
   var category = document.getElementById("categorySearch").value;
   var query = new Parse.Query(Mentor);
@@ -57,7 +61,7 @@ function findMentorByCategory() {
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
   }
-  }); 
+  });
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 

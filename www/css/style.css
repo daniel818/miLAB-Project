@@ -28,3 +28,7 @@
 .y-input-group {
     display: flex;
 }
+
+.mentorProfileDiv {
+    position: static !important;
+}

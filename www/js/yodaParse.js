@@ -49,7 +49,7 @@ function fingMentorByLinkedinID (linkedinID){
 
 //finding mentor by category
 function findMentorByCategory() {
-  var category = document.getElementById("categorySearch").value;
+  category = getParameterByName('category');
   var query = new Parse.Query(Mentor);
   query.equalTo("category", category);
   query.find({

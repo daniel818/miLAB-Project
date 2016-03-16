@@ -32,6 +32,11 @@ yodApp.controller('mentorProfileController', function($scope) {
     $scope.message = 'Everyone come and see how good I look!';
 });
 
+yodApp.controller('carouselControler', function($scope) {
+
+    $scope.message = 'Everyone come and see how good I look!';
+});
+
 
 
     yodApp.config(function($routeProvider) {
@@ -53,10 +58,14 @@ yodApp.controller('mentorProfileController', function($scope) {
                 controller:'mentorProfileController as mentorProfilectrl',
                 templateUrl:'mentorProfile.html'
             })
+            .when('/carousel', {
+                controller:'carouselControler as carouselctrl',
+                templateUrl:'carousel.html'
+            })
             .otherwise({
                 redirectTo:'/'
             });
     })
 
 //Category array
-var categories = ["Designer", "Marketing", "Management", "Copywriter", "Project Manager", "JEDI", "Producer", "Business intelligent"];
+var categories = ["Developer", "Designer", "Marketing", "Management", "Copywriter", "Project Manager", "JEDI", "Producer", "Business intelligent"];

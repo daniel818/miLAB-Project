@@ -1,7 +1,4 @@
-/*(function(){
-	console.log(tmpl("pledge_tmpl", {fullName: "dror", url: "http://www.amazon.com"}));
 
-})();*/
 
 
 Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
@@ -23,7 +20,7 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 	  numMeetings: 0
 	}, {
 	  success: function(mentor) {
-	    console.log("The Mentor was saved successfully:");
+      alert("The Mentor was saved successfully:" + category);
       console.log(category);
       console.log(fullName);
       console.log(job);
@@ -64,11 +61,4 @@ function findMentorByCategory() {
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
-function appendMentor(fullName,job,company,paragraph,img){
-  var formattedMentor = mentorTemplate.replace("%name%", fullName);
-  formattedMentor = formattedMentor.replace("%job%", job);
-   formattedMentor = formattedMentor.replace("%company%", company);
-  formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
-  formattedMentor = formattedMentor.replace("%img%", img);
-  $("#mentorsTinder").append(formattedMentor);
-}
+

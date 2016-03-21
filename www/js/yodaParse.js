@@ -58,7 +58,7 @@ function findMentorByCategory() {
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      appendMentor(object.get('name'),object.get('job'),object.get('company'),object.get('paragraph'),object.get('img'));
+      appendMentor(object.get('name'),object.get('job'),object.get('company'),object.get('paragraph'),object.get('img'),object.id);
     }
   },
   error: function(error) {

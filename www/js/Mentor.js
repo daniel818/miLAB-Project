@@ -35,12 +35,13 @@ function saveMentorForm(e) {
 }
 
 //Adding a mentor to the carousel
-function appendMentor(fullName, job, company, paragraph, img) {
+function appendMentor(fullName, job, company, paragraph, img, id) {
     var formattedMentor = mentorTemplate.replace("%name%", fullName);
     formattedMentor = formattedMentor.replace("%job%", job);
     formattedMentor = formattedMentor.replace("%company%", company);
     formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
     formattedMentor = formattedMentor.replace("%img%", img);
+    formattedMentor = formattedMentor.replace("%id%", id);
     $("#mentorsTinder").append(formattedMentor);
 }
 
@@ -61,10 +62,14 @@ function becomeMentorBTN() {
     document.getElementById("becomeMentorSection").style.display = "none";
     document.getElementById("linkedinSection").style.display="block";
 }
-
+//mentor form button click
 $("#mentorForm").find("button").on("click", saveMentorForm);
-
+//become a mentor button click
 $("#becomeMentorBTN").on("click", becomeMentorBTN);
+//the auto complete search in the mentor category
+
+var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
+
 
 
 

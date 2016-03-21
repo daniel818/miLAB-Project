@@ -5,4 +5,5 @@ function meetingBTN(){
     var mentorID = document.getElementsByClassName("mentorID");
     var i = $(".active").index();
     console.log(mentorID[i].textContent);
+    alert(mentorID[i].textContent);
 }

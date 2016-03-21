@@ -27,7 +27,7 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 	  }
 	});
 }
-//find mentor bu linkedinID
+//find mentor by linkedinID
 function fingMentorByLinkedinID (linkedinID){
     var query = new Parse.Query(Mentor);
     query.equalTo("linkedinID", linkedinID);

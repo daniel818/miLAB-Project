@@ -8,18 +8,22 @@ function saveLinkedinMember(member) {
     currentMentor.linkedinID = member.id;
     currentMentor.fullName = member.firstName + " " + member.lastName;
     currentMentor.job = member.headline;
-    if (member !== undefined) {
+    try {
         currentMentor.company = member.positions.values[0].company.name;
-    } else {
-        currentMentor.company = "";
+    } catch(err) {
+        currentMentor.company = "freelance";
     }
-    if (member.positions.values[0] !== undefined) {
+    try {
         currentMentor.img = member.pictureUrls.values[0];
-    } else {
+    } catch(err) {
         currentMentor.img = "http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg";
     }
     currentMentor.linkedinLink = member.publicProfileUrl;
     currentMentor.mail = member.emailAddress;
+    //moving to the mentor fields
+    document.getElementById("linkedinSection").style.display = "none";
+    document.getElementById("mentorFormSection").style.display="block";
+
 }
 
 //saving all mentor details after linkedinlogin and filling the form
@@ -48,12 +52,19 @@ function loadMentorProfile() {
     mentor = fingMentorByLinkedinID(linkedinID);
 }
 
-function searchMentors(){
+function searchMentors() {
     var category = document.getElementById("categorySearch").value;
     window.location = "carousel.html" + "?category=" + category + "&";
 }
 
+function becomeMentorBTN() {
+    document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("linkedinSection").style.display="block";
+}
+
 $("#mentorForm").find("button").on("click", saveMentorForm);
+
+$("#becomeMentorBTN").on("click", becomeMentorBTN);
 
 
 

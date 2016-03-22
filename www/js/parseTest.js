@@ -2,9 +2,9 @@ Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5
 
 var TestObject = Parse.Object.extend("TestObject");
 var newTestObject = new TestObject();
-// testObject.save({test1: "test1.2Data", test2: "test2.2Data", test3: "test3.2Data" }).then(function(object) {
-//    alert("A new testObject was created");
-//  });
+testObject.save({test1: "test1.2Data", test2: "test2.2Data", test3: "test3.2Data" }).then(function(object) {
+    alert("A new testObject was created");
+});
 
 var query = new Parse.Query(TestObject);
 query.get("h50KBRTFCf", {

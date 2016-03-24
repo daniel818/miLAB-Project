@@ -5,10 +5,39 @@
     <title>Title</title>
 </head>
 <body>
+<!--<p onclick="temp()">click here</p>-->
 
 
 
 <script>
+//    Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
+//    function temp(){
+//        Parse.FacebookUtils.logIn(null, {
+//            success: function(user) {
+//                if (!user.existed()) {
+//                    FB.api('/me?fields=id,name,email,permissions', function (response) {
+//
+//                        user.set('username', response.name);
+//                        user.set('email', response.email);
+//                        user.save();
+//
+//                        alert("You're registered and logged with via Facebook!");
+//
+//                        //redirect to dashboard
+//                    });
+//
+//
+//                } else {
+//                    alert("You're logged in with Facebook!");
+//                    //redirect to dashboard page
+//                }
+//            },
+//            error: function(user, error) {
+//                alert("User cancelled the Facebook login or did not fully authorize.");
+//            }
+//        });
+//    };
+
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '244246992579865',

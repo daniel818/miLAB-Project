@@ -18,7 +18,7 @@ grunt.loadNpmTasks('grunt-contrib-watch');
 			clientViews: {
 				files: watchFiles.clientViews,
 				options: {
-					livereload: true,
+					livereload: true
 				}
 			},
 			clientJS: {

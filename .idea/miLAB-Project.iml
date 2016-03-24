@@ -7,5 +7,6 @@
     <orderEntry type="library" name="angular-route" level="application" />
     <orderEntry type="library" name="angular-strap" level="application" />
     <orderEntry type="library" name="angular-strap.tpl" level="application" />
+    <orderEntry type="library" name="in" level="application" />
   </component>
 </module>

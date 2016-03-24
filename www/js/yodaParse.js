@@ -60,7 +60,7 @@ function findMentorByCategory() {
   error: function(error) {
     alert("Error: " + error.code + " " + error.message);
   }
-  }); 
+  });
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
@@ -72,3 +72,4 @@ function appendMentor(fullName,job,company,paragraph,img){
   formattedMentor = formattedMentor.replace("%img%", img);
   $("#mentorsTinder").append(formattedMentor);
 }
+

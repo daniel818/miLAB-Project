@@ -7,6 +7,7 @@ var yodApp = angular.module('yodApp', ['ngRoute','mgcrea.ngStrap']);
 yodApp.controller('HomeController', function($scope) {
     $scope.selectedState = "";
     $scope.states = ["Visual Designer", "Website Coordinator", "Communications Manager", "Editor Copywriter", "Project Manager"];
+
 });
 
 
@@ -15,11 +16,13 @@ yodApp.controller('MentorsControllers', function($scope) {
 
     $scope.message = 'Everyone come and see how good I look!';
     console.log("hello");
+    console.log(message);
 });
 
 yodApp.controller('HelpController', function($scope) {
 
     $scope.message = 'Everyone come and see how good I look!';
+
 });
 
 

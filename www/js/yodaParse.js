@@ -1,7 +1,4 @@
-/*(function(){
-	console.log(tmpl("pledge_tmpl", {fullName: "dror", url: "http://www.amazon.com"}));
 
-})();*/
 
 
 Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
@@ -19,33 +16,40 @@ function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLin
 	  img: img,
 	  mail: mail,
 	  linkedinLink: linkedinLink,
-    linkedinID : linkedinID,
+      linkedinID : linkedinID,
 	  numMeetings: 0
 	}, {
 	  success: function(mentor) {
-	    console.log("The Mentor was saved successfully:");
-      console.log(category);
-      console.log(fullName);
-      console.log(job);
-      console.log(company);
-      console.log(paragraph);
-      console.log(img);
-      console.log(mail);
-      console.log(linkedinLink);
-      console.log(linkedinID);
-	  },
+      window.location = "mentorProfile.html" + "?linkedinID=" + currentMentor.linkedinID + "&";
+      },
 	  error: function(mentor, error) {
 	    alert("The save failed");
 	  }
 	});
 }
+//find mentor by linkedinID
+function fingMentorByLinkedinID (linkedinID){
+    var query = new Parse.Query(Mentor);
+    query.equalTo("linkedinID", linkedinID);
+    query.first({
+        success: function(object) {
+            console.log(object.get("name"));
+            document.getElementById('img').src = object.get('img');
+            document.getElementById('name').innerHTML = object.get('name');
+            document.getElementById('company').innerHTML = object.get('company');
+            document.getElementById('job').innerHTML = object.get('job');
+            document.getElementById('paragraph').innerHTML = object.get('paragraph');
+        },
+        error: function(error) {
+            alert("Error: " + error.code + " " + error.message);
+        }
+    });
+}
 
 
-
-/* functions */
-
+//finding mentor by category
 function findMentorByCategory() {
-  var category = document.getElementById("categorySearch").value;
+  category = getParameterByName('category');
   var query = new Parse.Query(Mentor);
   query.equalTo("category", category);
   query.find({
@@ -54,7 +58,7 @@ function findMentorByCategory() {
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) {
       var object = results[i];
-      appendMentor(object.get('name'),object.get('job'),object.get('company'),object.get('paragraph'),object.get('img'));
+      appendMentor(object.get('name'),object.get('job'),object.get('company'),object.get('paragraph'),object.get('img'),object.id);
     }
   },
   error: function(error) {
@@ -64,6 +68,7 @@ function findMentorByCategory() {
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
+
 function appendMentor(fullName,job,company,paragraph,img){
   var formattedMentor = mentorTemplate.replace("%name%", fullName);
   formattedMentor = formattedMentor.replace("%job%", job);
@@ -72,4 +77,3 @@ function appendMentor(fullName,job,company,paragraph,img){
   formattedMentor = formattedMentor.replace("%img%", img);
   $("#mentorsTinder").append(formattedMentor);
 }
-

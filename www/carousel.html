@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="yodApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.tpl.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/app.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+    <script src="js/Mentor.js"></script>
+    <script src="js/yodaParse.js"></script>
+    <script src="js/helper.js"></script>
+
+</head>
+
+<body onload="findMentorByCategory()">
+<!-- Carousel-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false"
+     style="display:none;">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" id="mentorsTinder" role="listbox">
+        <div class="item active">
+            <div class="carousel-caption">
+                <img src="http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg" alt="mentorImg"
+                     class="img-circle profileImg">
+                <h1>Mentor Name</h1>
+                <h4>Company</h4>
+                <h3>Job Title</h3>
+                <p>A personal paragraph: "what do you love about your job"</p>
+                <div class="mentorID" style="display: none;">123456</div>
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="meetingBTN" onclick="meetingBTN()">Set Up a Meeting</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Controls -->
+    <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- End of Carousel -->
+
+<script src="js/users.js"></script>
+</body>
+
+</html>

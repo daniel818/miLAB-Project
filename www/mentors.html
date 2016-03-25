@@ -16,6 +16,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.tpl.min.js"></script>
+
+    <link href="css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jQuery.js"></script>
@@ -42,6 +50,13 @@
     </script>
     <script type="text/javascript">
 
+    function liAuth(){
+        console.log("press");
+        IN.User.authorize(function(){
+            onLinkedInLoad();
+        });
+    }
+
     // Setup an event listener to make an API call once auth is complete
     function onLinkedInLoad() {
         IN.Event.on(IN, "auth", getProfileData);
@@ -56,43 +71,59 @@
 
     // Handle an error response from the API call
     function onError(error) {
-        console.log(error);
+        alert(error);
     }
 
     // Use the API call wrapper to request the member's basic profile data
     function getProfileData() {
       var fields = ["id","firstName","lastName","headline","positions","picture-urls::(original)","publicProfileUrl","emailAddress"]
-    IN.API.Profile("me").fields(fields).result(onSuccess).error(onError);
+        IN.API.Profile("me").fields(fields).result(onSuccess).error(onError);
    }
 
   </script>
 
 
     <!-- Jumbotron -->
-    <div class="mainCover jumbotron">
+    <div id="becomeMentorSection" class="mainCover jumbotron">
       <div class="container">
-      <h1 class="text-center header">Yodapp Mentors</h1>
-      <div class="container">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Become a Mentor</button>
+          <h1 class="text-center header">Yodapp Mentors</h1>
+          <!--video-->
+          <div class="mentorsVideo embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ToOwALsME1A"></iframe>
+          </div>
+          <!--button-->
+          <div class="container">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="becomeMentorBTN">Become a Mentor</button>
+          </div>
+          <p class="text-center"> I am actually looking for a mentor... <a href="index.html"> Click Here! </a> </p>
       </div>
-      <p class="text-center"> I am actually looking for a mentor... <a href="index.html"> Click Here! </a> </p>
     </div>
+
+    <!-- linkedin login -->
+    <div id="linkedinSection" class="container" style="display: none;">
+        <form class="form-signin">
+            <h2 class="form-signin-heading"><small>To set-up your Mentor profile,<br>
+                only 2 things are needed<br><br></small>First:</h2>
+            <a class="btn btn-block btn-social btn-lg btn-linkedin" onclick="liAuth()">
+                <span class="fa fa-linkedin"></span> Sign in with Linkedin
+            </a>
+
+        </form>
     </div>
-    <!-- /.Jumbotron -->
+
+
 
     <!-- FORM -->
-    <div class="row" style="padding:24px">
+    <div id="mentorFormSection" class="row" style="padding:24px; display:none;">
         <div class="col-md-3"></div>
         <div class="col-md-6">
           <form name="" id="mentorForm">
-            <script type="in/Login"></script>
             <div class="form-group">
-              <label for="category">Category</label>
-              <input type="text" class="form-control" id="category" placeholder="Marketing, Developmet, Design etc.">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" placeholder="Marketing, Developmet, Design etc.">
             </div>
             <div class="form-group">
-              <!--<label for="mail">What do you love about your profession?</label>-->
-
+              <label for="mail">What do you love about your profession?</label>
               <textarea class="form-control" id="paragraph" rows="4">I love to start from skretch and create amazing websites</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -101,6 +132,16 @@
         <div class="col-md-3"></div>
     </div>
   <!-- /FORM -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--parse-->
+    <script src="js/yodaParse.js"></script>
+    <script type="text/javascript" src="js/Mentor.js"></script>
 
 
     <!-- FOOTER -->

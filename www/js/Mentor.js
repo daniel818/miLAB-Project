@@ -4,62 +4,73 @@ Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5
 var currentMentor = new Object();
 
 //saving all the data we get from linkedIn to the currentMentor
-function saveLinkedinMember(member){
-  currentMentor.linkedinID = member.id;
-  currentMentor.fullName = member.firstName + " " + member.lastName;
-  currentMentor.job = member.headline;
-  if (member !== undefined) {
-    currentMentor.company = member.positions.values[0].company.name;    
-  } else {
-    currentMentor.company = "";
-  }
-  currentMentor.img = member.pictureUrls.values[0];
-  currentMentor.linkedinLink = member.publicProfileUrl;
-  currentMentor.mail = member.emailAddress;
-}
+function saveLinkedinMember(member) {
+    currentMentor.linkedinID = member.id;
+    currentMentor.fullName = member.firstName + " " + member.lastName;
+    currentMentor.job = member.headline;
+    try {
+        currentMentor.company = member.positions.values[0].company.name;
+    } catch(err) {
+        currentMentor.company = "freelance";
+    }
+    try {
+        currentMentor.img = member.pictureUrls.values[0];
+    } catch(err) {
+        currentMentor.img = "http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg";
+    }
+    currentMentor.linkedinLink = member.publicProfileUrl;
+    currentMentor.mail = member.emailAddress;
+    //moving to the mentor fields
+    document.getElementById("linkedinSection").style.display = "none";
+    document.getElementById("mentorFormSection").style.display="block";
 
+}
 
 //saving all mentor details after linkedinlogin and filling the form
-function saveMentorForm(e){
-  e.preventDefault();
-  var category = document.getElementById("category").value;
-  var paragraph = document.getElementById("paragraph").value;
-  saveMentor(category,currentMentor.fullName,currentMentor.job,currentMentor.company,paragraph,currentMentor.img,currentMentor.mail,currentMentor.linkedinLink,currentMentor.linkedinID);
+function saveMentorForm(e) {
+    e.preventDefault();
+    var category = document.getElementById("category").value;
+    var paragraph = document.getElementById("paragraph").value;
+    saveMentor(category, currentMentor.fullName, currentMentor.job, currentMentor.company, paragraph, currentMentor.img, currentMentor.mail, currentMentor.linkedinLink, currentMentor.linkedinID);
 }
 
+//Adding a mentor to the carousel
+function appendMentor(fullName, job, company, paragraph, img, id) {
+    var formattedMentor = mentorTemplate.replace("%name%", fullName);
+    formattedMentor = formattedMentor.replace("%job%", job);
+    formattedMentor = formattedMentor.replace("%company%", company);
+    formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
+    formattedMentor = formattedMentor.replace("%img%", img);
+    formattedMentor = formattedMentor.replace("%id%", id);
+    $("#mentorsTinder").append(formattedMentor);
+}
+
+//After loading the mentorProfile page this function load the mentor from parse
+//and append the mentor details to the profile page
+function loadMentorProfile() {
+    alert("congrats! You are now a Yodapp Mentor!");
+    linkedinID = getParameterByName('linkedinID');
+    mentor = fingMentorByLinkedinID(linkedinID);
+}
+
+function searchMentors() {
+    var category = document.getElementById("categorySearch").value;
+    window.location = "carousel.html" + "?category=" + category + "&";
+}
+
+function becomeMentorBTN() {
+    document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("linkedinSection").style.display="block";
+}
+//mentor form button click
 $("#mentorForm").find("button").on("click", saveMentorForm);
+//become a mentor button click
+$("#becomeMentorBTN").on("click", becomeMentorBTN);
+//the auto complete search in the mentor category
+
+var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
 
 
 
-//template helper
-/*(function(){
-  var cache = {};
-  this.tmpl = function tmpl(str, data){
-    // Figure out if we're getting a template, or if we need to
-    // load the template - and be sure to cache the result.
-    var fn = !/\W/.test(str) ?
-      cache[str] = cache[str] ||
-        tmpl(document.getElementById("#dror").innerHTML) : 
-      // Generate a reusable function that will serve as a template
-      // generator (and which will be cached).
-      new Function("obj",
-        "var p=[],print=function(){p.push.apply(p,arguments);};" +    
-        // Introduce the data as local variables using with(){}
-        "with(obj){p.push('" +   
-        // Convert the template into pure JavaScript
-        str
-          .replace(/[\r\t\n]/g, " ")
-          .split("<%").join("\t")
-          .replace(/((^|%>)[^\t]*)'/g, "$1\r")
-          .replace(/\t=(.*?)%>/g, "',$1,'")
-          .split("\t").join("');")
-          .split("%>").join("p.push('")
-          .split("\r").join("\\'")
-      + "');}return p.join('');");
-    // Provide some basic currying to the user
-    return data ? fn( data ) : fn;
-  };
-})();*/
 
-//console.log(tmpl("dror", {fullName: "dror", url: "http://www.amazon.com"}));
 

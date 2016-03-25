@@ -1,7 +1,16 @@
-.body {
-  padding-bottom: 20px;
-
+body {
+    background-color: #9fd2c0 !important;
+    padding-bottom: 20px;
 }
+
+.mentorsVideo {
+    margin-bottom: 24px;
+}
+
+.profileImg {
+    width: 140px;
+}
+
 
 .header{
   padding-top: 48px;
@@ -19,6 +28,7 @@
 
 .mainCover{
 	margin-bottom: 0px;
+    background-color: transparent;
 }
 
 .myMarketing{
@@ -28,3 +38,9 @@
 .y-input-group {
     display: flex;
 }
+
+.mentorProfileDiv {
+    position: static !important;
+}
+
+

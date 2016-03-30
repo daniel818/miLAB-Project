@@ -29,6 +29,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover.png?raw=true");
+    background-size: cover;
     height: 731px;
 
 }

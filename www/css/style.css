@@ -28,7 +28,7 @@ body {
 .mainCover {
     margin: 0px;
     padding: 0px;
-    background-image: url("images/home_cover.png");
+    background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover.png?raw=true");
     height: 731px;
 
 }
@@ -81,11 +81,11 @@ body {
 }
 
 .logo {
-    margin-top: 10%;
+    padding-top: 10%;
+    width: 92px;
     max-width: 167px;
     max-height: 167px;
-    width: 92px;
-    height: 92px;
+
 }
 
 .logo-name {

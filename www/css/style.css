@@ -48,9 +48,17 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 42px;
-    background-image: url(data:images/Search-100.png);
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Search-100.png?raw=true);
     background-position:50% 50%;
     background-repeat:no-repeat;
+}
+
+.mentor-icon {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Contacts-100.png?raw=true);
+}
+
+.calender-icon {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Calendar-100.png?raw=true);
 }
 
 .marketing-header {
@@ -59,6 +67,15 @@ body {
     font-size: 38px;
     font-weight: 100;
     line-height: 85px;
+    text-align: center;
+}
+
+.marketing-sub-header {
+    font-family: Roboto;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
     text-align: center;
 }
 

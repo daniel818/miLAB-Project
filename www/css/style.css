@@ -160,6 +160,11 @@ body {
     transform: scaleY(1.0071);
 }
 
+.search-field-blue {
+    background-color: #50d2c2;
+    width: 80%;
+}
+
 .search-icon {
     background-color: #ff3366;
     margin-left: -4px;
@@ -167,6 +172,11 @@ body {
     width: 58px;
     border: 0px;
     vertical-align: top;
+}
+
+.search-icon-blue {
+    background-color: #50d2c2;
+    margin-left: -5px;
 }
 
 input[type=text], textarea {

@@ -68,9 +68,18 @@
                 <div class="img-circle calender-icon"></div>
                 <p class="marketing-sub-header">Set Up a Meeting</p>
             </div>
-
         </div><!-- /.row -->
 
+        <!-- Search Bar -->
+        <div class="jumbotron">
+            <p class="search-bar">
+                <input class="search-field search-field-blue" type="text" id="categorySearch" ng-model="selectedState"
+                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
+                <button class="search-icon search-icon-blue" onclick="searchMentors()">
+                    <img src="images/search-50.png" height="25px" width="25px">
+                </button>
+            </p>
+        </div>
         <!-- FOOTER -->
         <footer>
             <p class="pull-right"><a href="#">Back to top</a></p>

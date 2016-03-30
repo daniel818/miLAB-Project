@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Bootstrap core CSS -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/carousel.css" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/justified-nav.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
 
 
@@ -33,68 +33,26 @@
 
     <body ng-controller="HomeController">
 
-
     <!-- Jumbotron -->
     <div class="mainCover jumbotron">
-        <div class="container">
-            <h1 class="text-center header">Yodapp</h1>
-            <h2 class="text-center subHeader">Experience A Day At Your Future Job</h2>
-
+            <img src="images/logo.png" alt="yodapp_logo" class="logo center-block">
+            <img src="images/yodapp.png" alt="yodapp" class="logo-name center-block">
+            <h1 class="text-center">Experience a Profession <br> Then Decide.</h1>
             <!-- Search Bar -->
-            <div class="row">
-                <div class="col-lg-offset-3 col-lg-6">
-                    <div class="searchBox">
-                        <input type="text" class="form-control" id="categorySearch" ng-model="selectedState"
-                               bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
-                        <button onclick="searchMentors()">search</button>
-                    </div><!-- /input-group -->
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
+            <p class="search-bar">
+                <input class="search-field" type="text" id="categorySearch" ng-model="selectedState"
+                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
+                <button class="search-icon" onclick="searchMentors()">
+                    <img src="images/search-50.png">
+                </button>
+            </p>
+
             <!--  End Search Bar -->
-
-            <p class="text-center"> Want to be a mentor ? <a href="mentors.html"> Click Here! </a></p>
-
-
-        </div>
+            <p class="text-center sub-text"> Want to be a mentor ? <a href="mentors.html"> Click Here! </a></p>
     </div>
 
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false" style="display:none;">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" id="mentorsTinder" role="listbox">
-            <div class="item active">
-                <div class="carousel-caption">
-                    <img src="http://www.monologuedb.com/wp-content/uploads/2011/02/yoda1.jpg" alt="mentorImg" style="width:200px; height:200px;">
-                    <h1>Mentor Name</h1>
-                    <h4>Company</h4>
-                    <h3>Job Title</h3>
-                    <p>A personal paragraph: "what do you love about your job"</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Controls -->
-        <a class="left carousel-control" data-target="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" data-target="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!-- End of Carousel -->
-
-    <div class="container marketing myMarketing">
+    <!--on boarding-->
+    <div class="container marketing myMarketing" style="background-color: #FFF;">
 
         <!-- Three columns of text below the carousel -->
         <div class="row">
@@ -130,6 +88,7 @@
                     href="https://s-media-cache-ak0.pinimg.com/736x/bd/d2/3c/bdd23c14fb39340d48b0d6f9ec29688b.jpg">Privacy</a> &middot;
                 <a href="http://s.quickmeme.com/img/44/44dea24ec92369a4f57c36f9827db52fcc01f4d1c488da5a4c0189658fee254d.jpg">Terms</a>
             </p>
+            <a href="https://icons8.com">Icon pack by Icons8</a>
         </footer>
 
     </div><!-- /.container -->

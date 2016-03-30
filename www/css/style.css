@@ -12,17 +12,25 @@
 
 h1 {
     font-family: Roboto;
-    color: #ffffff;
-    font-size: 56px; /* Approximation due to font substitution */
+    color: #ffffff !important;
+    font-size: 54px;
     font-weight: 100;
-    line-height: 85px; /* Approximation due to font substitution */
+    line-height: 74px;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 66px;
 }
 
 body {
     padding-bottom: 20px;
     background-color: #0f0f0f;
+}
+
+.sub-text {
+    font-family: Roboto;
+    color: #ffffff;
+    opacity: 0.8;
+    font-size: 26px; !important;
+    font-weight: 100; !important;
 }
 
 .mentorsVideo {
@@ -64,46 +72,79 @@ body {
     position: static !important;
 }
 
-.logo-circle {
-    border-radius: 50%;
-    background-color: #ffffff;
-    width: 300px;
-    height: 300px;
-    position: relative;
-}
-
-.logo-icon {
-    width: 182px;
-    height: 196px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+.logo {
+    max-width: 167px;
+    max-height: 167px;
+    width: 22.3%;
+    height: 5.1%;
+    margin-top: 135px;
 }
 
 .logo-name {
-    margin-top: 18px;
-    width: 256px;
-    height: 103px;
+    margin-top: 24px;
+    height: 3.2%;
+    width: 34.1%;
+    max-width: 256px;
+    max-height: 103px;
 }
 
 .search-bar {
-    margin-top: 36px;
-    display: -webkit-box;
+    margin-top: 66px;
+    margin-bottom: 482px !important;
 }
-.search-btn {
+
+.search-field {
+    vertical-align: top;
     background-color: #ff3366;
-    width: 504px;
     height: 103px;
+    width: 504px;
+    border: 0px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 50px;
+    text-align: center;
+    transform: scaleY(1.007);
 }
 
 .search-icon {
-    background-color:  #ff3366;
-    width: 102px;
+    background-color: #ff3366;
+    margin-left: -2px;
     height: 103px;
-    margin-left: 2px;
+    width: 103px;
+    border: 0px;
+    vertical-align: top;
+}
+
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+}
+
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 3px #fff;
+    padding: 3px 0px 3px 3px;
+}
+
+::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #FFF;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #FFF;
+}
+
+:-ms-input-placeholder {
+    color: #FFF;
 }
 
 /* RESPONSIVE CSS
@@ -111,6 +152,14 @@ body {
 
 @media (min-width: 768px) {
 
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 38px;
+        line-height: 48px;
+    }
 }
 
 

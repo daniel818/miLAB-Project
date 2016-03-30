@@ -68,12 +68,3 @@ function findMentorByCategory() {
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
-
-function appendMentor(fullName,job,company,paragraph,img){
-  var formattedMentor = mentorTemplate.replace("%name%", fullName);
-  formattedMentor = formattedMentor.replace("%job%", job);
-   formattedMentor = formattedMentor.replace("%company%", company);
-  formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
-  formattedMentor = formattedMentor.replace("%img%", img);
-  $("#mentorsTinder").append(formattedMentor);
-}

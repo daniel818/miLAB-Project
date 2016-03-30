@@ -28,10 +28,11 @@ body {
 .mainCover {
     margin: 0px;
     padding: 0px;
+    padding-top: 10%;
     background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover.png?raw=true");
     background-size: cover;
     height: 731px;
-
+    background-position: center;
 }
 
 .sub-text {
@@ -82,8 +83,8 @@ body {
 }
 
 .logo {
-    padding-top: 10%;
     width: 92px;
+    height: 92px;
     max-width: 167px;
     max-height: 167px;
 
@@ -171,6 +172,11 @@ a {
     .sub-text {
         position: static;
     }
+
+    .mainCover {
+        background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover_big.png?raw=true");
+    }
+
 }
 
 @media (max-width: 480px) {

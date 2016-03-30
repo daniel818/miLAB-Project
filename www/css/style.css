@@ -13,24 +13,36 @@
 h1 {
     font-family: Roboto;
     color: #ffffff !important;
-    font-size: 54px;
     font-weight: 100;
-    line-height: 74px;
     text-align: center;
-    margin-top: 66px;
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 24px;
 }
 
 body {
-    padding-bottom: 20px;
+    padding: 0px;
     background-color: #0f0f0f;
+}
+
+.mainCover {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    height: 731px;
 }
 
 .sub-text {
     font-family: Roboto;
     color: #ffffff;
     opacity: 0.8;
-    font-size: 26px; !important;
-    font-weight: 100; !important;
+    font-size: 16px !important;
+    font-weight: 100 !important;
+    margin-bottom: 0px !important;
+    position: absolute;
+    bottom: 12px;
+    text-align: center;
+    width: 100%;
 }
 
 .mentorsVideo {
@@ -55,11 +67,6 @@ body {
     padding-bottom: 12px;
 }
 
-.mainCover {
-    margin-bottom: 0px;
-    background-color: transparent;
-}
-
 .myMarketing {
     margin-top: 30px;
 }
@@ -73,46 +80,43 @@ body {
 }
 
 .logo {
+    margin-top: 10%;
     max-width: 167px;
     max-height: 167px;
-    width: 22.3%;
-    height: 5.1%;
-    margin-top: 135px;
+    width: 92px;
+    height: 92px;
 }
 
 .logo-name {
-    margin-top: 24px;
-    height: 3.2%;
-    width: 34.1%;
-    max-width: 256px;
-    max-height: 103px;
+    margin-top: 12px;
+    height: 56px;
+    width: 140px;
 }
 
 .search-bar {
     margin-top: 66px;
-    margin-bottom: 482px !important;
 }
 
 .search-field {
     vertical-align: top;
     background-color: #ff3366;
-    height: 103px;
-    width: 504px;
+    height: 58px;
+    width: 67%;
     border: 0px;
     font-family: Roboto;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 100;
     line-height: 50px;
     text-align: center;
-    transform: scaleY(1.007);
+    transform: scaleY(1.0071);
 }
 
 .search-icon {
     background-color: #ff3366;
-    margin-left: -2px;
-    height: 103px;
-    width: 103px;
+    margin-left: -4px;
+    height: 58px;
+    width: 58px;
     border: 0px;
     vertical-align: top;
 }
@@ -147,6 +151,11 @@ input[type=text]:focus, textarea:focus {
     color: #FFF;
 }
 
+a {
+    color: #50d2c2;
+    font-weight: 300;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -157,9 +166,11 @@ input[type=text]:focus, textarea:focus {
 @media (max-width: 480px) {
 
     h1 {
-        font-size: 38px;
-        line-height: 48px;
+
     }
+
+
+
 }
 
 

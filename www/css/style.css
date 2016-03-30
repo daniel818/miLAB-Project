@@ -22,7 +22,6 @@ h1 {
 
 body {
     padding: 0px;
-    background-color: #0f0f0f;
 }
 
 .mainCover {
@@ -33,6 +32,34 @@ body {
     background-size: cover;
     height: 731px;
     background-position: center;
+}
+
+.marketing {
+    padding-top: 42px;
+}
+
+.img-circle {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ff3366;
+    background-color: #ffffff;
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    background-image: url(data:images/Search-100.png);
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+}
+
+.marketing-header {
+    font-family: Roboto;
+    color: #ff3366;
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 85px;
+    text-align: center;
 }
 
 .sub-text {

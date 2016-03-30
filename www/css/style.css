@@ -28,8 +28,9 @@ body {
 .mainCover {
     margin: 0px;
     padding: 0px;
-    background-color: transparent;
+    background-image: url("images/home_cover.png");
     height: 731px;
+
 }
 
 .sub-text {
@@ -102,6 +103,7 @@ body {
     background-color: #ff3366;
     height: 58px;
     width: 67%;
+    max-width: 608px;
     border: 0px;
     font-family: Roboto;
     color: #ffffff;
@@ -160,14 +162,19 @@ a {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+    h1 {
+        font-size: 58px;
+        line-height: 78px;
+    }
 
+    .sub-text {
+        position: static;
+    }
 }
 
 @media (max-width: 480px) {
 
-    h1 {
 
-    }
 
 
 

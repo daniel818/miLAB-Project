@@ -8,9 +8,10 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/justified-nav.css" rel="stylesheet">
+        <link href="css/carousel.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-
+        <!-- roboto font -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
@@ -32,7 +33,7 @@
 
     </head>
 
-    <body ng-controller="HomeController">
+<body ng-controller="HomeController">
 
     <!-- Jumbotron -->
     <div class="mainCover jumbotron">
@@ -44,57 +45,47 @@
                 <input class="search-field" type="text" id="categorySearch" ng-model="selectedState"
                        bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
                 <button class="search-icon" onclick="searchMentors()">
-                    <img src="images/search-50.png">
+                    <img src="images/search-50.png" height="25px" width="25px">
                 </button>
             </p>
-
             <!--  End Search Bar -->
             <p class="text-center sub-text"> Want to be a mentor ? <a href="mentors.html"> Click Here! </a></p>
     </div>
 
-    <!--on boarding-->
-    <div class="container marketing myMarketing" style="background-color: #FFF;">
-
-        <!-- Three columns of text below the carousel -->
+    <!--Marketing-->
+    <div class="container marketing">
+        <div class="marketing-header">How it Workes?</div>
         <div class="row">
             <div class="col-lg-4">
-                <img class="img-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     alt="Generic placeholder image" width="140" height="140">
-                <h2>Search</h2>
-                <p>Search for your Dream Job</p>
-            </div><!-- /.col-lg-4 -->
+                <div class="img-circle"></div>
+                <p class="marketing-sub-header">Search For Your Dream Job</p>
+            </div>
             <div class="col-lg-4">
-                <img class="img-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     alt="Generic placeholder image" width="140" height="140">
-                <h2>Choose</h2>
-                <p>Browse a Mentor and choose</p>
-            </div><!-- /.col-lg-4 -->
+                <div class="img-circle mentor-icon"></div>
+                <p class="marketing-sub-header">Choose a Mentor</p>
+            </div>
             <div class="col-lg-4">
-                <img class="img-circle"
-                     src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                     alt="Generic placeholder image" width="140" height="140">
-                <h2>Meet</h2>
-                <p>Set up a meeting with the Mentor</p>
-            </div><!-- /.col-lg-4 -->
+                <div class="img-circle calender-icon"></div>
+                <p class="marketing-sub-header">Set Up a Meeting</p>
+            </div>
         </div><!-- /.row -->
 
+        <!-- Search Bar -->
+        <div class="jumbotron">
+            <p class="search-bar">
+                <input class="search-field search-field-blue" type="text" id="categorySearch" ng-model="selectedState"
+                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
+                <button class="search-icon search-icon-blue" onclick="searchMentors()">
+                    <img src="images/search-50.png" height="25px" width="25px">
+                </button>
+            </p>
+        </div>
         <!-- FOOTER -->
         <footer>
-            <p class="pull-right"><a
-                    href="http://www.quickmeme.com/img/1a/1a7c8c80d5f253113551e29fb266720f603d2d0f4a124266fb81c4bbe38cb069.jpg">Back
-                to top</a></p>
-            <p>&copy; 2015 Yoda Milab-IDC &middot; <a
-                    href="https://s-media-cache-ak0.pinimg.com/736x/bd/d2/3c/bdd23c14fb39340d48b0d6f9ec29688b.jpg">Privacy</a> &middot;
-                <a href="http://s.quickmeme.com/img/44/44dea24ec92369a4f57c36f9827db52fcc01f4d1c488da5a4c0189658fee254d.jpg">Terms</a>
-            </p>
-            <a href="https://icons8.com">Icon pack by Icons8</a>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2016 Yodapp &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
-
-    </div><!-- /.container -->
-
-
-   </body>
+    </div>
+</body>
 
 </html>

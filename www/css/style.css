@@ -13,24 +13,83 @@
 h1 {
     font-family: Roboto;
     color: #ffffff !important;
-    font-size: 54px;
     font-weight: 100;
-    line-height: 74px;
     text-align: center;
-    margin-top: 66px;
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: 24px;
 }
 
 body {
-    padding-bottom: 20px;
-    background-color: #0f0f0f;
+    padding: 0px;
+}
+
+.mainCover {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 10%;
+    background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover.png?raw=true");
+    background-size: cover;
+    height: 731px;
+    background-position: center;
+}
+
+.marketing {
+    padding-top: 42px;
+}
+
+.img-circle {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #ff3366;
+    background-color: #ffffff;
+    width: 140px;
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 42px;
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Search-100.png?raw=true);
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+}
+
+.mentor-icon {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Contacts-100.png?raw=true);
+}
+
+.calender-icon {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Calendar-100.png?raw=true);
+}
+
+.marketing-header {
+    font-family: Roboto;
+    color: #ff3366;
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 85px;
+    text-align: center;
+}
+
+.marketing-sub-header {
+    font-family: Roboto;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    text-align: center;
 }
 
 .sub-text {
     font-family: Roboto;
     color: #ffffff;
     opacity: 0.8;
-    font-size: 26px; !important;
-    font-weight: 100; !important;
+    font-size: 16px !important;
+    font-weight: 100 !important;
+    margin-bottom: 0px !important;
+    position: absolute;
+    bottom: 12px;
+    text-align: center;
+    width: 100%;
 }
 
 .mentorsVideo {
@@ -55,11 +114,6 @@ body {
     padding-bottom: 12px;
 }
 
-.mainCover {
-    margin-bottom: 0px;
-    background-color: transparent;
-}
-
 .myMarketing {
     margin-top: 30px;
 }
@@ -73,48 +127,56 @@ body {
 }
 
 .logo {
+    width: 92px;
+    height: 92px;
     max-width: 167px;
     max-height: 167px;
-    width: 22.3%;
-    height: 5.1%;
-    margin-top: 135px;
+
 }
 
 .logo-name {
-    margin-top: 24px;
-    height: 3.2%;
-    width: 34.1%;
-    max-width: 256px;
-    max-height: 103px;
+    margin-top: 12px;
+    height: 56px;
+    width: 140px;
 }
 
 .search-bar {
     margin-top: 66px;
-    margin-bottom: 482px !important;
 }
 
 .search-field {
     vertical-align: top;
     background-color: #ff3366;
-    height: 103px;
-    width: 504px;
+    height: 58px;
+    width: 67%;
+    max-width: 608px;
     border: 0px;
     font-family: Roboto;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 100;
     line-height: 50px;
     text-align: center;
-    transform: scaleY(1.007);
+    transform: scaleY(1.0071);
+}
+
+.search-field-blue {
+    background-color: #50d2c2;
+    width: 80%;
 }
 
 .search-icon {
     background-color: #ff3366;
-    margin-left: -2px;
-    height: 103px;
-    width: 103px;
+    margin-left: -4px;
+    height: 58px;
+    width: 58px;
     border: 0px;
     vertical-align: top;
+}
+
+.search-icon-blue {
+    background-color: #50d2c2;
+    margin-left: -5px;
 }
 
 input[type=text], textarea {
@@ -147,19 +209,36 @@ input[type=text]:focus, textarea:focus {
     color: #FFF;
 }
 
+a {
+    color: #50d2c2;
+    font-weight: 300;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+    h1 {
+        font-size: 58px;
+        line-height: 78px;
+    }
+
+    .sub-text {
+        position: static;
+    }
+
+    .mainCover {
+        background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover_big.png?raw=true");
+    }
 
 }
 
 @media (max-width: 480px) {
 
-    h1 {
-        font-size: 38px;
-        line-height: 48px;
-    }
+
+
+
+
 }
 
 

@@ -28,7 +28,6 @@ h2 {
     text-align: center;
     padding-top: 42px;
     margin-top: 0px;
-    margin-bottom: 24px;
 }
 
 h3 {
@@ -38,8 +37,25 @@ h3 {
     font-weight: 400;
     text-align: center;
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 }
+
+.paragraph {
+    font-family: 'Roboto';
+    color: #1B1B24;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+.company {
+    font-family: 'Roboto';
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
 
 body {
     padding: 0px;
@@ -61,9 +77,20 @@ body {
 
 .carousel {
     margin-top: 12px;
-    margin-right: 42px;
     margin-left: 42px;
+    margin-right: 42px;
     margin-bottom: 24px;
+
+}
+
+.carousel-caption {
+    bottom: auto;
+    padding-top: 60px;
+    text-shadow: none;
+    right: auto;
+    left: auto;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 .carousel .item {
@@ -95,6 +122,21 @@ body {
     font-size: 18px;
     font-weight: 400;
     text-align: left;
+}
+
+.meetingBTN {
+    background-color: #ff3366;
+    width: 294px;
+    height: 50px;
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    border: 0px;
 }
 
 .img-circle {
@@ -238,6 +280,10 @@ body {
 .search-icon-blue {
     background-color: #50d2c2;
     margin-left: -5px;
+}
+
+.carousel-indicators {
+    bottom: 0px;
 }
 
 input[type=text], textarea {

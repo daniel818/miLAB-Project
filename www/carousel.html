@@ -8,9 +8,10 @@
     <!-- Bootstrap core CSS -->
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.7/angular-strap.min.js"></script>
@@ -42,12 +43,11 @@
                              class="profileImg">
                     </div>
                     <div class="carousel-caption">
-
-                        <h3>Job Title</h3>
-                        <p>A personal paragraph: "what do you love about your job"</p>
+                        <div class="company">Job Title</div>
+                        <div class="paragraph">A personal paragraph: "what do you love about your job"</div>
                         <div class="mentorID" style="display: none;">123456</div>
-                        <button type="button" class="btn btn-primary btn-lg btn-block" id="meetingBTN" onclick="meetingBTN()">Set Up a Meeting</button>
                     </div>
+                    <button type="button" class="meetingBTN" id="meetingBTN" onclick="meetingBTN()">Set Up a Meeting</button>
                 </div>
             </div>
         </div>

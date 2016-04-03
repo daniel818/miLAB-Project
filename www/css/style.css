@@ -32,7 +32,7 @@ h2 {
 
 h3 {
     font-family: Roboto;
-    color: #ddd;
+    color: #dddddd;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -43,14 +43,14 @@ h3 {
 .paragraph {
     font-family: 'Roboto';
     color: #1B1B24;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     text-align: left;
 }
 .company {
     font-family: 'Roboto';
     color: #000000;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     text-align: center;
 }
@@ -86,7 +86,7 @@ body {
 
 .carousel-caption {
     bottom: auto;
-    padding-top: 60px;
+    padding-top: 50px;
     text-shadow: none;
     right: auto;
     left: auto;
@@ -109,10 +109,12 @@ body {
 }
 
 .carousel-cover {
-    background-color: #2d4373;
     width: 100%;
     height: 180px;
     text-align: center;
+    background: #2d4373 url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/design.png?raw=true);
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -284,6 +286,7 @@ body {
 
 .carousel-indicators {
     position: relative;
+    margin-top: 24px;
 }
 
 input[type=text], textarea {

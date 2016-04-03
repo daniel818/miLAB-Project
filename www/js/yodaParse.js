@@ -51,6 +51,7 @@ function fingMentorByLinkedinID (linkedinID){
 //finding mentor by category
 function findMentorByCategory() {
   category = getParameterByName('category');
+  document.getElementById("category_header").innerHTML = category;
   var query = new Parse.Query(Mentor);
   query.equalTo("category", category);
   query.find({

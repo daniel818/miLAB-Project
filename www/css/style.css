@@ -199,8 +199,8 @@ body {
 
 .profileImg {
     border-radius: 50%;
-    width: 114px;
-    height: 114px;
+    width: 108px;
+    height: 108px;
 }
 
 .header {
@@ -320,6 +320,11 @@ a {
     color: #50d2c2;
     font-weight: 300;
 }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

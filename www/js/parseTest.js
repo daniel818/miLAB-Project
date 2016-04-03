@@ -1,7 +1,7 @@
 Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
 
 var TestObject = Parse.Object.extend("TestObject");
-var newTestObject = new TestObject();
+var testObject = new TestObject();
 testObject.save({test1: "test1.2Data", test2: "test2.2Data", test3: "test3.2Data" }).then(function(object) {
     alert("A new testObject was created");
 });
@@ -22,6 +22,13 @@ query.get("h50KBRTFCf", {
     // error is a Parse.Error with an error code and message.
   }
 });
+var Student = Parse.Object.extend("Student");
+
+var student = new Student();
+student.save({test1: "test1.2Data", test2: "test2.2Data", test3: "test3.2Data" }).then(function(object) {
+  alert("A new testObject was created");
+});
+
 
 
 

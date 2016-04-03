@@ -1,10 +1,11 @@
 
-
-
 Parse.initialize("EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL", "9NY3ogqKjbPQwDz1V5uVTMMaQQar8T5LzCr6HucI");
 
 var Mentor = Parse.Object.extend("Mentor");
-
+var Student = Parse.Object.extend("Student");
+var Meeting = Parse.Object.extend("Meeting");
+var mentorMail;
+var studentMail;
 function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLink,linkedinID) {
 	  var mentor = new Mentor();
 	  mentor.save({
@@ -68,3 +69,67 @@ function findMentorByCategory() {
   document.getElementById("carousel-example-generic").style.display = "inherit";
 }
 
+//Retrieve Mentor Info.
+
+function retrieveMentorInfo (id) {
+    var query = new Parse.Query(Mentor);
+    query.get( id , {
+        success: function (mentor) {
+
+            mentorMail = mentor.get("mail");
+            console.log(mentorMail);
+            alert(mentorMail);
+        },
+        error: function (object, error) {
+            console.log("fail");
+
+        }
+    });
+}
+
+//save new user
+function saveUser(){
+
+    var name = document.getElementById("signup-name1").value;
+     studentMail = document.getElementById("signup-email1").value;
+
+    var student = new Student();
+
+    student.set("username", name );
+    student.set("email", studentMail);
+
+
+    student.save(null, {
+
+        success: function(student) {
+            alert("Success");
+
+            document.getElementById("signup1").style.display = "none";
+            document.getElementById("mailFormSection").style.display="block";
+
+        }, error: function(student, error){
+
+            console.log("signup error: " + error.message);
+            alert("signup error:" + error.message);
+        }
+    });
+}
+
+function createMeeting(){
+    alert("hello");
+    var meeting = new Meeting();
+
+    meeting.set("Student", studentMail );
+    meeting.set("Mentor", mentorMail);
+
+
+    meeting.save(null, {
+
+        success: function(meeting) {
+            alert("Success creating meesage");
+
+        }, error: function(meeting, error){
+            alert("signup error:" + error.message);
+        }
+    });
+}

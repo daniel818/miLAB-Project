@@ -43,8 +43,10 @@
             <!-- Search Bar -->
             <p class="search-bar">
                 <input class="search-field" type="text" id="categorySearch" ng-model="selectedState"
-                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
-                <button class="search-icon" onclick="searchMentors()">
+                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead
+                       onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('searchBtn').click()">
+                <button id="searchBtn" class="search-icon" onclick="searchMentors()">
                     <img src="images/search-50.png" height="25px" width="25px">
                 </button>
             </p>
@@ -74,8 +76,10 @@
         <div class="jumbotron">
             <p class="search-bar">
                 <input class="search-field search-field-blue" type="text" id="categorySearch" ng-model="selectedState"
-                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead>
-                <button class="search-icon search-icon-blue" onclick="searchMentors()">
+                       bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead
+                       onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('searchBtn2').click()">>
+                <button id="searchBtn2" class="search-icon search-icon-blue" onclick="searchMentors()">
                     <img src="images/search-50.png" height="25px" width="25px">
                 </button>
             </p>

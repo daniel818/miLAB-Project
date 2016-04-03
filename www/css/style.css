@@ -38,6 +38,43 @@ body {
     padding-top: 42px;
 }
 
+.carousel {
+    margin-top: 12px;
+    margin-right: 42px;
+    margin-left: 42px;
+    margin-bottom: 24px;
+}
+
+.carousel .item {
+    height: 558px;
+    background-color: #ffffff;
+}
+
+.carousel-header {
+    margin-top: -12px;
+    margin-left: 42px;
+    font-family: Roboto;
+    color: #50d2c2;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.carousel-cover {
+    background-color: #2d4373;
+    width: 100%;
+    height: 236px;
+}
+
+
+.carousel-header-white {
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
 .img-circle {
     display: block;
     border-radius: 50%;

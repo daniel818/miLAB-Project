@@ -6,6 +6,7 @@ var Student = Parse.Object.extend("Student");
 var Meeting = Parse.Object.extend("Meeting");
 var mentorMail;
 var studentMail;
+
 function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLink,linkedinID) {
 	  var mentor = new Mentor();
 	  mentor.save({
@@ -101,8 +102,9 @@ function saveUser(){
         success: function(student) {
             console.log("User saved");
 
-            document.getElementById("signup1").style.display = "none";
+            document.getElementById("facebook").style.display = "none";
             document.getElementById("mailFormSection").style.display="block";
+            document.getElementById("number-circle").innerHTML = "2";
 
         }, error: function(student, error){
 
@@ -113,18 +115,13 @@ function saveUser(){
 }
 
 function createMeeting(){
-    console.log("meeting was saved")
     var meeting = new Meeting();
-
     meeting.set("Student", studentMail );
     meeting.set("Mentor", mentorMail);
-
-
     meeting.save(null, {
-
         success: function(meeting) {
-            alert("Success creating meesage");
-
+            console.log("mail sent from " + studentMail + " to " + mentorMail);
+            window.location = 'success.html';
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }

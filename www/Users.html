@@ -37,9 +37,10 @@
     <div class="login-cover">
         <h2 class="login-header">Set Up a Meeting</h2>
         <h3>Only two things are needed</h3>
-        <div class="number-circle">1</div>
+        <div id="number-circle">1</div>
     </div>
     <!--facebook-->
+    <div id="facebook">
         <div class="facebook-login">
             <div class="facebook-icon">
                 <img src="images/facebook.png">
@@ -47,12 +48,11 @@
             <div class="facebook-btn">Sign in with Facebook</div>
         </div>
         <p class="note">
-        It's only for the mentor to see that you are a real person.<br>
-        We want use your facebook details for any other reason
+            It's only for the mentor to see that you are a real person.<br>
+            We want use your facebook details for any other reason
         </p>
-
-    <!--temporary manual login-->
-    <form id="signup1" style="margin-top: 84px;">
+        <!--temporary manual login-->
+        <form id="signup1" style="margin-top: 300px;">
             <p>
                 <label for="signup-name1">Enter your name</label>
                 <input id="signup-name1" type="text" placeholder="Name">
@@ -62,20 +62,13 @@
                 <input id="signup-email1" type="text" placeholder="Email">
             </P>
             <P><button onclick="saveUser(),saveForMail()">Sign in</button> </P>
-    </form>
-
-    <div id="mailFormSection" class="row" style="padding:24px; display:none;">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <form name="" id="mailForm">
-                       <div class="form-group">
-                            <label for="mail">Add a personal paragraph about yourself</label>
-                            <textarea class="form-control" id="paragraph" rows="4">I love to start to observe people while they work and stalk them for an hour</textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" onclick="createMeeting()">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-3"></div>
+        </form>
+    </div>
+    <!--paragraph-->
+    <div id="mailFormSection" style="display: none;">
+        <p class="note">Add a personal paragraph about yourself</p>
+        <textarea class="form-control" id="paragraph" rows="4" placeholder="I love to start to observe people while they work and stalk them for an hour"></textarea>
+        <button type="submit" class="pink-btn" onclick="createMeeting()">SEND</button>
     </div>
 
 </body>

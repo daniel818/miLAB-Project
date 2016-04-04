@@ -146,6 +146,7 @@ h3 {
     left: auto;
     padding-left: 18px;
     padding-right: 18px;
+    width:100%;
 }
 
 .carousel .item {

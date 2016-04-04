@@ -35,13 +35,14 @@ function saveMentorForm(e) {
 }
 
 //Adding a mentor to the carousel
-function appendMentor(fullName, job, company, paragraph, img, id) {
+function appendMentor(fullName, job, company, paragraph, img, id, meetings) {
     var formattedMentor = mentorTemplate.replace("%name%", fullName);
     formattedMentor = formattedMentor.replace("%job%", job);
     formattedMentor = formattedMentor.replace("%company%", company);
     formattedMentor = formattedMentor.replace("%paragraph%", paragraph);
     formattedMentor = formattedMentor.replace("%img%", img);
     formattedMentor = formattedMentor.replace("%id%", id);
+    formattedMentor = formattedMentor.replace("%meetings%", meetings);
     $("#mentorsTinder").append(formattedMentor);
 }
 

@@ -76,21 +76,17 @@ function retrieveMentorInfo (id) {
     var query = new Parse.Query(Mentor);
     query.get( id , {
         success: function (mentor) {
-
             mentorMail = mentor.get("mail");
             console.log(mentorMail);
-            alert(mentorMail);
         },
         error: function (object, error) {
             console.log("fail");
-
         }
     });
 }
 
 //save new user
 function saveUser(){
-
     var name = document.getElementById("signup-name1").value;
      studentMail = document.getElementById("signup-email1").value;
 
@@ -103,7 +99,7 @@ function saveUser(){
     student.save(null, {
 
         success: function(student) {
-            alert("Success");
+            console.log("User saved");
 
             document.getElementById("signup1").style.display = "none";
             document.getElementById("mailFormSection").style.display="block";
@@ -117,7 +113,7 @@ function saveUser(){
 }
 
 function createMeeting(){
-    alert("hello");
+    console.log("meeting was saved")
     var meeting = new Meeting();
 
     meeting.set("Student", studentMail );

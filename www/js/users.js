@@ -6,11 +6,9 @@ var mentorMail;
 
 
 function meetingBTN(){
-
     var mentorID = document.getElementsByClassName("mentorID");
     var i = $(".active").index();
     console.log(mentorID[i].textContent);
-    alert(mentorID[i].textContent);
     mentorIdString = mentorID[i].textContent;
     retrieveMentorInfo(mentorIdString);
     window.location = "Users.html" + "?mentorID=" + mentorIdString + "&";
@@ -19,5 +17,4 @@ function meetingBTN(){
 function saveForMail() {
     var temp = getParameterByName('mentorID');
     var mentorMail = retrieveMentorInfo(temp);
-
 }

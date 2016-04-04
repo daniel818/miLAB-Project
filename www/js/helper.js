@@ -5,7 +5,7 @@
 '<div class="marker purpel"></div></div><div class="col-xs-8 col-sm-8""><div class="company">%company%</div><div class="data-label">COMPANY</div>' +
 '<div class="marker"></div></div></div><div class="line"></div><div class="paragraph">%paragraph%</div><div class="mentorID" style="display: none;">%id%</div>' +
 '</div><button type="button" class="meetingBTN" id="meetingBTN" onclick="meetingBTN()"><img src="images/Calendar-50.png" class="calender-icon">' +
-'Set Up a Meeting</button><div class="mentorID" style="display: none;">%id%</div></div></div>';
+'Set Up a Meeting</button></div></div>';
 
 
 //get a parameter from the url

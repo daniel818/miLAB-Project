@@ -6,9 +6,13 @@
 @gray-lighter: lighten(#000, 93.5%); // #eee
 @Pink: #ff3366
 @Tchelet: #50d2c2;
-@Purpel:  #d667cd;
+@Purpel:  #8c88ff;
 
 */
+
+body {
+    padding: 0px;
+}
 
 h1 {
     font-family: Roboto;
@@ -40,26 +44,76 @@ h3 {
     margin-bottom: 12px;
 }
 
+.label {
+    font-family: Roboto;
+    color: rgba(29, 29, 38, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
 .paragraph {
     font-family: 'Roboto';
     color: #1B1B24;
     font-size: 16px;
     font-weight: 400;
     text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 .company {
     font-family: 'Roboto';
     color: #000000;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: -4px;
 }
 
-
-
-body {
-    padding: 0px;
+.marker{
+    background-color: #50d2c2;
+    width: 21px;
+    height: 3px;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.purpel{
+    background-color: #8c88ff;
+}
+
+.line {
+    background-color: rgba(29, 29, 38, 0.05);
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.calender-icon{
+    padding-right: 12px;
+    padding-bottom: 6px;
+}
+
+.carousel-control{
+    background-color: inherit;
+    opacity: 0.6;
+
+}
+
+.carousel-control.right {
+    right: -42px;
+    background-image: none;
+
+}
+
+.carousel-control.left {
+    left: -42px;
+    background-image: none;
+}
+
 
 .mainCover {
     margin: 0px;
@@ -86,7 +140,7 @@ body {
 
 .carousel-caption {
     bottom: auto;
-    padding-top: 50px;
+    padding-top: 54px;
     text-shadow: none;
     right: auto;
     left: auto;

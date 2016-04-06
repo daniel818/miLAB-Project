@@ -7,6 +7,7 @@
 @Pink: #ff3366
 @Tchelet: #50d2c2;
 @Purpel:  #8c88ff;
+@linkedin: #007bb6;
 
 */
 
@@ -42,6 +43,22 @@ h3 {
     text-align: center;
     margin-top: 6px;
     margin-bottom: 12px;
+}
+
+.mentor-button{
+    margin-top: 42px;
+    margin-bottom: 16px;
+    background-color: #50d2c2;
+    height: 58px;
+    width: 80%;
+    max-width: 608px;
+    border: 0px;
+    font-family: Roboto;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 50px;
+    text-align: center;
 }
 
 .login-header{
@@ -110,6 +127,18 @@ h3 {
     display: inline-block;
 }
 
+.linkedin-icon {
+    padding-top: 14px;
+}
+
+.linkedin-blue {
+    background-color: #0077b5;
+}
+
+.linkedin-blue:hover{
+    background-color: #419cca;
+}
+
 .note {
     font-family: Roboto;
     color: #777777;
@@ -119,6 +148,13 @@ h3 {
 }
 
 textarea.form-control {
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input.form-control{
     height: auto;
     width: 80%;
     margin-left: auto;

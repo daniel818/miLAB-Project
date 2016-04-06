@@ -61,12 +61,13 @@ function searchMentors() {
 
 function becomeMentorBTN() {
     document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("loginCover").style.display = "block"
     document.getElementById("linkedinSection").style.display="block";
 }
 //mentor form button click
-$("#mentorForm").find("button").on("click", saveMentorForm);
+$("#createMentorBTN").on("click", saveMentorForm);
 //become a mentor button click
-$("#becomeMentorBTN").on("click", becomeMentorBTN);
+$("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 //the auto complete search in the mentor category
 
 var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];

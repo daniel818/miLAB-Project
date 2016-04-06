@@ -12,7 +12,6 @@ yodApp.controller('HomeController', function($scope) {
     $scope.states = ["Visual Designer", "Website Coordinator", "Communications Manager", "Editor Copywriter", "Project Manager"];
 
     $scope.states = categories;
-
 });
 
 

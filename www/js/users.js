@@ -18,3 +18,16 @@ function saveForMail() {
     var temp = getParameterByName('mentorID');
     var mentorMail = retrieveMentorInfo(temp);
 }
+
+function isCategory() {
+
+    var input = document.getElementById("categorySearch");
+
+    if (categories.indexOf(input) > -1) {
+        //In the array!
+        searchMentors();
+    } else {
+        document.getElementById("errCategory").style.display="block";
+    }
+
+}

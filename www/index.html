@@ -26,6 +26,7 @@
         <script src="js/Mentor.js"></script>
         <script src="js/yodaParse.js"></script>
         <script src="js/helper.js"></script>
+        <script src="js/users.js"></script>
         <!--<script type="text/template" id="dror">
             <a href="<%=url%>"><%=name%></a>
           </script>-->
@@ -46,12 +47,13 @@
                        bs-options="state for state in states" placeholder="Search for your Dream Job" bs-typeahead
                        onkeydown = "if (event.keyCode == 13)
                         document.getElementById('searchBtn').click()">
-                <button id="searchBtn" class="search-icon" onclick="searchMentors()">
+                <button id="searchBtn" class="search-icon" onclick="isCategory()">
                     <img src="images/search-50.png" height="25px" width="25px">
                 </button>
             </p>
             <!--  End Search Bar -->
             <p class="text-center sub-text"> Want to be a mentor ? <a href="mentors.html"> Click Here! </a></p>
+            <p id="errCategory" class="text-center sub-text" style="display: none"> Sorry Choose another Category </p>
     </div>
 
     <!--Marketing-->
@@ -79,7 +81,7 @@
                        bs-options="state for state in states" placeholder="Search for your Dream Job"  bs-typeahead
                        onkeydown = "if (event.keyCode == 13)
                         document.getElementById('searchBtn2').click()">
-                <button id="searchBtn2" class="search-icon search-icon-blue" onclick="searchMentors()">
+                <button id="searchBtn2" class="search-icon search-icon-blue" onclick="isCategory()">
                     <img src="images/search-50.png" height="25px" width="25px">
                 </button>
             </p>

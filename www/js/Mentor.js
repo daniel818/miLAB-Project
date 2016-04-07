@@ -73,6 +73,14 @@ $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
 
 
+function isCategoryMentor() {
+    var input = document.getElementById("categorySearch");
 
+    if (categories.indexOf(input) > -1) {
+        //In the array!
+    } else {
+        document.getElementById("errCategory").style.display="block";
+    }
+}
 
 

@@ -512,9 +512,15 @@ input[type=text]:focus, textarea:focus {
     color: #FFF;
 }
 
+
 a {
     color: #50d2c2;
     font-weight: 300;
+}
+
+.err-mentor {
+    position: initial;
+    color: black;
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }

@@ -20,11 +20,10 @@ function saveForMail() {
 }
 
 function isCategory() {
-
-    var input = document.getElementById("categorySearch");
-
+    var input = document.getElementById("categorySearch").value;
     if (categories.indexOf(input) > -1) {
         //In the array!
+
         searchMentors();
     } else {
         document.getElementById("errCategory").style.display="block";

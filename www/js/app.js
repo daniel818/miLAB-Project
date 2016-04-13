@@ -8,9 +8,6 @@ var yodApp = angular.module('yodApp', ['ngRoute','mgcrea.ngStrap']);
 
 yodApp.controller('HomeController', function($scope) {
     $scope.selectedState = "";
-
-    $scope.states = ["Visual Designer", "Website Coordinator", "Communications Manager", "Editor Copywriter", "Project Manager"];
-
     $scope.states = categories;
 });
 
@@ -70,8 +67,4 @@ yodApp.controller('carouselControler', function($scope) {
 
     });
 
-
-
-//Category array
-var categories = ["Developer", "Designer", "Marketing", "Management", "Copywriter", "Project Manager", "JEDI", "Producer", "Business intelligent"];
 

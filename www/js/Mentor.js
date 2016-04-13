@@ -70,12 +70,11 @@ $("#createMentorBTN").on("click", saveMentorForm);
 $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 //the auto complete search in the mentor category
 
-var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
+var categories = ['JEDI','Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
 
 
 function isCategoryMentor() {
-    var input = document.getElementById("categorySearch");
-
+    var input = document.getElementById("categorySearch").value;
     if (categories.indexOf(input) > -1) {
         //In the array!
     } else {

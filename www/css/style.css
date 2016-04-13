@@ -7,6 +7,7 @@
 @Pink: #ff3366
 @Tchelet: #50d2c2;
 @Purpel:  #8c88ff;
+@Alert: #fcab53;
 @linkedin: #007bb6;
 
 */
@@ -384,6 +385,15 @@ input.form-control{
     margin-bottom: 0px !important;
     position: absolute;
     bottom: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.err-text {
+    font-family: Roboto;
+    color: #fcab53;
+    font-size: 14px !important;
+    font-weight: 100 !important;
     text-align: center;
     width: 100%;
 }

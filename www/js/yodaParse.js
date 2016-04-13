@@ -41,6 +41,7 @@ function fingMentorByLinkedinID (linkedinID){
             document.getElementById('company').innerHTML = object.get('company');
             document.getElementById('job').innerHTML = object.get('job');
             document.getElementById('paragraph').innerHTML = object.get('paragraph');
+            document.getElementById('numMeeting').innerHTML = object.get('numMeetings');
         },
         error: function(error) {
             alert("Error: " + error.code + " " + error.message);

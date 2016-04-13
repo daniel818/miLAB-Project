@@ -49,7 +49,6 @@ function appendMentor(fullName, job, company, paragraph, img, id, meetings) {
 //After loading the mentorProfile page this function load the mentor from parse
 //and append the mentor details to the profile page
 function loadMentorProfile() {
-    alert("congrats! You are now a Yodapp Mentor!");
     linkedinID = getParameterByName('linkedinID');
     mentor = fingMentorByLinkedinID(linkedinID);
 }

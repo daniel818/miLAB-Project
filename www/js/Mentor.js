@@ -70,7 +70,7 @@ $("#createMentorBTN").on("click", saveMentorForm);
 $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 //the auto complete search in the mentor category
 
-var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
+//var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
 
 
 function isCategoryMentor() {

@@ -21,11 +21,12 @@ function saveForMail() {
 
 function isCategory() {
 
-    var input = document.getElementById("categorySearch");
-
-    if (categories.indexOf(input) > -1) {
+    var input1 = document.getElementById("categorySearch1").value;
+    console.log(input1);
+    if (categories.indexOf(input1) > -1) {
         //In the array!
         searchMentors();
+
     } else {
         document.getElementById("errCategory").style.display="block";
     }

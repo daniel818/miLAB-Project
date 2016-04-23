@@ -21,10 +21,9 @@ function saveForMail() {
 
 function isCategory() {
 
-    var input1 = document.getElementById("categorySearch1").value;
-    console.log(input1);
-    if (categories.indexOf(input1) > -1) {
-        //In the array!
+    var input = document.getElementById("categorySearch").value;
+    if (categories.indexOf(input) > -1) {
+
         searchMentors();
 
     } else {

@@ -49,7 +49,6 @@ function appendMentor(fullName, job, company, paragraph, img, id, meetings) {
 //After loading the mentorProfile page this function load the mentor from parse
 //and append the mentor details to the profile page
 function loadMentorProfile() {
-    alert("congrats! You are now a Yodapp Mentor!");
     linkedinID = getParameterByName('linkedinID');
     mentor = fingMentorByLinkedinID(linkedinID);
 }
@@ -61,23 +60,28 @@ function searchMentors() {
 
 function becomeMentorBTN() {
     document.getElementById("becomeMentorSection").style.display = "none";
-    document.getElementById("loginCover").style.display = "block"
+    document.getElementById("loginCover").style.display = "block";
     document.getElementById("linkedinSection").style.display="block";
 }
 //mentor form button click
-$("#createMentorBTN").on("click", saveMentorForm);
+//$("#createMentorBTN").on("click", saveMentorForm);
 //become a mentor button click
 $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 //the auto complete search in the mentor category
 
+
 //var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
+
+var categories = ['JEDI','Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
+
 
 
 function isCategoryMentor() {
-    var input = document.getElementById("categorySearch");
-
+    var input = document.getElementById("category").value;
     if (categories.indexOf(input) > -1) {
-        //In the array!
+        //mentor form button click
+        $("#createMentorBTN").on("click", saveMentorForm);
+
     } else {
         document.getElementById("errCategory").style.display="block";
     }

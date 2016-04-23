@@ -8,19 +8,13 @@ var yodApp = angular.module('yodApp', ['ngRoute','mgcrea.ngStrap']);
 
 yodApp.controller('HomeController', function($scope) {
     $scope.selectedState = "";
-
-    $scope.states = ["Visual Designer", "Website Coordinator", "Communications Manager", "Editor Copywriter", "Project Manager"];
-
     $scope.states = categories;
 });
 
 
 
-yodApp.controller('MentorsControllers', function($scope) {
+yodApp.controller('MentorsController', function($scope) {
 
-    $scope.message = 'Everyone come and see how good I look!';
-    console.log("hello");
-    console.log(message);
 });
 
 yodApp.controller('HelpController', function($scope) {
@@ -49,7 +43,7 @@ yodApp.controller('carouselControler', function($scope) {
                 templateUrl:'home.html'
             })
             .when('/mentors', {
-                controller:'MentorsControllers as mentorctrl',
+                controller:'MentorsController as mentorctrl',
                 templateUrl:'mentors.html'
             })
             .when('/new', {
@@ -70,8 +64,4 @@ yodApp.controller('carouselControler', function($scope) {
 
     });
 
-
-
-//Category array
-var categories = ["Developer", "Designer", "Marketing", "Management", "Copywriter", "Project Manager", "JEDI", "Producer", "Business intelligent"];
 

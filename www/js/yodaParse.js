@@ -93,7 +93,7 @@ function saveUser(facebookID,userName,userEmail){
     //checking if user exists
     var query = new Parse.Query(Student);
     query.equalTo("facebookID", facebookID);
-    query.first({
+    query.find({
         success: function(object) {
             // if It is a new user
             if (object.length == 0){

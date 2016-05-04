@@ -69,8 +69,7 @@
                     console.log('user name: ' + response.id);
                     console.log('user name: ' + response.name);
                     console.log('user name: ' + response.email);
-                    document.getElementById('status').innerHTML =
-                            'Thanks for logging in, ' + response.name + '!';
+                    saveUser(response.id,response.name,response.email);
                 }
         );
     }

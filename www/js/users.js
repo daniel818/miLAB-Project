@@ -16,11 +16,12 @@ function meetingBTN(){
 
 function saveForMail() {
     var temp = getParameterByName('mentorID');
+    console.log('mentor id: ' + temp);
     var mentorMail = retrieveMentorInfo(temp);
+    console.log('mentor email: ' + mentorMail);
 }
 
 function isCategory() {
-
     var input = document.getElementById("categorySearch").value;
     if (categories.indexOf(input) > -1) {
 

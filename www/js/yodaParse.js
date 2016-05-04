@@ -73,7 +73,6 @@ function findMentorByCategory() {
 }
 
 //Retrieve Mentor Info.
-
 function retrieveMentorInfo (id) {
     var query = new Parse.Query(Mentor);
     query.get( id , {
@@ -88,27 +87,22 @@ function retrieveMentorInfo (id) {
 }
 
 //save new user
-function saveUser(){
-    var name = document.getElementById("signup-name1").value;
-     studentMail = document.getElementById("signup-email1").value;
-
+function saveUser(facebookID,userName,userEmail){
+    //saving  the student email for the save meeting funvtion
+    studentMail = userEmail;
+    //creating a new user
     var student = new Student();
-
-    student.set("username", name );
+    student.set("facebookID", facebookID);
+    student.set("username", userName );
     student.set("email", studentMail);
 
-
     student.save(null, {
-
         success: function(student) {
-            console.log("User saved");
-
+            console.log("New User saved");
             document.getElementById("facebook").style.display = "none";
             document.getElementById("mailFormSection").style.display="block";
             document.getElementById("number-circle").innerHTML = "2";
-
         }, error: function(student, error){
-
             console.log("signup error: " + error.message);
             alert("signup error:" + error.message);
         }

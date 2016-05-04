@@ -46,12 +46,9 @@
             // Logged into your app and Facebook.
             login();
         } else if (response.status === 'not_authorized') {
-            // The person is logged into Facebook, but not your app.
-            document.getElementById('status').innerHTML = 'not_authorized';
+            console.log("The person is logged into Facebook, but not your app.");
         } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            document.getElementById('status').innerHTML = 'else';
+            console.log("The person is not logged into Facebook");
         }
     }
     // This function is called when someone finishes with the Login

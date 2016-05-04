@@ -398,6 +398,10 @@ input.form-control{
     width: 100%;
 }
 
+.weight-400 {
+    font-weight: 400 !important;
+}
+
 .mentorsVideo {
     margin-bottom: 24px;
 }

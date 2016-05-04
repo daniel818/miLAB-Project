@@ -69,13 +69,6 @@ function becomeMentorBTN() {
 $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
 //the auto complete search in the mentor category
 
-
-//var categories = ['Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
-
-var categories = ['JEDI','Development', 'Design', 'Managment', 'Marketing', "Business", "Product"];
-
-
-
 function isCategoryMentor() {
     var input = document.getElementById("category").value;
     if (categories.indexOf(input) > -1) {
@@ -86,5 +79,17 @@ function isCategoryMentor() {
         document.getElementById("errCategory").style.display="block";
     }
 }
+
+var categories = ['JEDI',
+    'Hardware Engineer',
+    'Software Development',
+    'IT',
+    'WEB',
+    'Marketing',
+    'Communications',
+    'QA',
+    'Designer',
+    'Product'];
+
 
 

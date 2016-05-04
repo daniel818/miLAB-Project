@@ -559,6 +559,14 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
         background-image: url("https://github.com/daniel818/miLAB-Project/blob/master/www/images/home_cover_big.png?raw=true");
     }
 
+    .glyphicon-chevron-left {
+        margin-left: -36px !important;
+    }
+
+    .glyphicon-chevron-right {
+        margin-right: -36px !important;
+    }
+
 }
 
 @media (max-width: 480px) {

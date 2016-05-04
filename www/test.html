@@ -43,7 +43,7 @@
         FB.init({
             appId      : '1583235582004843',
             cookie     : true,  // enable cookies to allow the server to access
-                                // the session
+            status     : true,                                // the session
             xfbml      : true,  // parse social plugins on this page
             version    : 'v2.5' // use graph api version 2.5
         });
@@ -96,8 +96,8 @@
   the FB.login() function when clicked.
 -->
 
-<!--<fb:login-button data-scope="email,public_profile" onlogin="checkLoginState();">-->
-<!--</fb:login-button>-->
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 
 <button onclick="FB.login(function(){}, {scope: 'public_profile,email'})">log in</button>
 

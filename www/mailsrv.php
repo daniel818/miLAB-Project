@@ -8,9 +8,9 @@ ParseClient::setServerURL('https://api.parse.com/1/');
 
 use Parse\ParseObject;
 
-$testObject = ParseObject::create("TestObject");
-$testObject->set("foo", "bar");
-$testObject->save();
+$restObject = ParseObject::create("RestObject");
+$restObject->set("foo", "bar");
+$restObject->save();
 
 var_dump($_GET['meeting_id']);
 

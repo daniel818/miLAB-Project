@@ -6,4 +6,4 @@ $headers = 'From: info@yodapp.co.il' . "\r\n" .
     'Reply-To: eranilani@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
+var_dump(mail($to, $subject, $message, $headers));

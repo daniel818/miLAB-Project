@@ -134,7 +134,7 @@ function createMeeting(){
     meeting.save(null, {
         success: function(meeting) {
             console.log("mail sent from " + studentMail + " to " + mentorMail);
-            console.log(meeting.get("objectId"), meeting.id);
+            console.log(meeting.id);
             //window.location = 'success.html';
         }, error: function(meeting, error){
             alert("signup error:" + error.message);

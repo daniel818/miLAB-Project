@@ -138,7 +138,7 @@ function createMeeting(){
         success: function(meeting) {
             console.log("mail sent from " + studentMail + " to " + mentorMail);
             console.log(meeting.id);
-            //window.location = 'success.html';
+            window.location = 'mailsrv.php?meeting_id='+meeting.id;
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }

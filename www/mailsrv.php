@@ -1,4 +1,11 @@
 <?php
+var_dump($_GET['meeting_id']);
+
+// get the object from parse
+
+exit();
+
+
 $to      = 'avital.daniel@gmail.com';
 $subject = 'the subject';
 $message = 'hello';

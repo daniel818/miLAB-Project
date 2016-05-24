@@ -2,7 +2,7 @@
 require 'vendor/autoload.php';
 
 use Parse\ParseClient;
-
+$xx = "A";
 ParseClient::initialize('EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL', 'b9Q8l6GujZd0vafu425eyepmH4k32myJeUvGgbS3', 'zZeJlsPDd1mBxsRojtyX3QJi9RfynZI4m9soO9xM');
 ParseClient::setServerURL('https://api.parse.com/parse/');
 
@@ -27,3 +27,4 @@ $headers = 'From: info@yodapp.co.il' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 var_dump(mail($to, $subject, $message, $headers));
+echo xx;

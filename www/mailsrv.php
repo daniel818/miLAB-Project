@@ -27,9 +27,9 @@ $content = $_POST['con'];
 
 
 
-$to      = 'avital.daniel@gmail.com';
+$to      = $studentMail;
 $subject = 'the subject';
-$message = 'hello';
+$message = $content;
 $headers = 'From: info@yodapp.co.il' . "\r\n" .
     'Reply-To: eranilani@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();

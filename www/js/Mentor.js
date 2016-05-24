@@ -63,9 +63,18 @@ function searchMentors() {
 
 function becomeMentorBTN() {
     document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("steps").style.display = "none";
     document.getElementById("loginCover").style.display = "block";
     document.getElementById("linkedinSection").style.display="block";
 }
+
+function becomeMentorBTN1() {
+    document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("steps").style.display = "none";
+    document.getElementById("loginCover").style.display = "block";
+    document.getElementById("linkedinSection").style.display="block";
+}
+
 //mentor form button click
 //$("#createMentorBTN").on("click", saveMentorForm);
 //become a mentor button click

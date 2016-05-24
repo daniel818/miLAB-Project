@@ -358,6 +358,10 @@ input.form-control{
     background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Calendar-100.png?raw=true);
 }
 
+.mentor-link {
+    background-image: image();
+}
+
 .marketing-header {
     font-family: Roboto;
     color: #ff3366;
@@ -432,6 +436,12 @@ input.form-control{
 
 .y-input-group {
     display: flex;
+}
+
+.y-imgHowTO {
+    width: 380px;
+    height: auto;
+    margin: auto 3px;
 }
 
 .mentorProfileDiv {

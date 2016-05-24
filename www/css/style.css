@@ -359,7 +359,7 @@ input.form-control{
 }
 
 .mentor-link {
-    background-image: image();
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/mentor-link.png?raw=true);
 }
 
 .marketing-header {

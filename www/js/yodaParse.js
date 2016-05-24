@@ -158,5 +158,5 @@ function sentMail(from,to,content){
     };
     xhttp.open("POST", "/mailsrv.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send();
+    xhttp.send(data);
 }

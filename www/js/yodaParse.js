@@ -139,7 +139,8 @@ function createMeeting(){
             console.log("mail sent from " + studentMail + " to " + mentorMail);
             console.log(meeting.id);
             //window.location = 'mailsrv.php?meeting_id='+meeting.id;
-            window.location = 'mailsrv.php?studentMail=' + studentMail + '&mentorMail=' + mentorMail;
+            //window.location = 'mailsrv.php?studentMail=' + studentMail + '&mentorMail=' + mentorMail;
+            sentMail(studentMail,mentorMail,mailContent);
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }

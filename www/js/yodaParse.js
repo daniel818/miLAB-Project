@@ -138,10 +138,24 @@ function createMeeting(){
         success: function(meeting) {
             console.log("mail sent from " + studentMail + " to " + mentorMail);
             console.log(meeting.id);
-            window.location = 'mailsrv.php?meeting_id='+meeting.id;
+            //window.location = 'mailsrv.php?meeting_id='+meeting.id;
+            window.location = 'mailsrv.php?studentMail=' + studentMail + '&mentorMail=' + mentorMail;
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }
     });
-
+}
+function sentMail(from,to,content){
+    var data = 'studentMail=' + from + '&mentorMail=' + to + '&con=' + content;
+    var xhttp;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //cfunc(xhttp);
+            console.log('yay');
+        }
+    };
+    xhttp.open("POST", "/mailsrv.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
 }

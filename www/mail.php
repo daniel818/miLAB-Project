@@ -1,3 +1,3 @@
 <?php
 
-print 2+2;
+echo "gal";

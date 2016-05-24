@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use Parse\ParseClient;
 $xx = "A";
 ParseClient::initialize('EoP2P9g5Ic5lc6Mxebgx4FcEA6Ro7AQmsAtKMRUL', 'b9Q8l6GujZd0vafu425eyepmH4k32myJeUvGgbS3', 'zZeJlsPDd1mBxsRojtyX3QJi9RfynZI4m9soO9xM');
-ParseClient::setServerURL('http://www.yodapp.co.il/vendor/parse/');
+ParseClient::setServerURL('http://localhost:1337/parse');
 
 use Parse\ParseObject;
 

@@ -153,7 +153,7 @@ function sentMail(from,to,content){
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             //cfunc(xhttp);
-            window.location = '/success.html';
+           // window.location = '/success.html';
         }
     };
     xhttp.open("POST", "/mailsrv.php", true);

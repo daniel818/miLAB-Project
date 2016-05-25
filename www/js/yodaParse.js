@@ -137,10 +137,10 @@ function createMeeting(){
     meeting.save(null, {
         success: function(meeting) {
             console.log("mail sent from " + studentMail + " to " + mentorMail);
-            console.log(meeting.id);
             //window.location = 'mailsrv.php?meeting_id='+meeting.id;
             //window.location = 'mailsrv.php?studentMail=' + studentMail + '&mentorMail=' + mentorMail;
             sentMail(studentMail,mentorMail,mailContent);
+            window.location = '/success.html'
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }
@@ -159,5 +159,4 @@ function sentMail(from,to,content){
     xhttp.open("POST", "/mailsrv.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(data);
-    window.location = '/success.html'
 }

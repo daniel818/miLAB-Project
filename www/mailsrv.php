@@ -28,8 +28,8 @@ $content = $_POST['con'];
 
 
 $to      = $mentorMail;
-$subject = 'the subject';
-$message = $content + '\nThe Student Email is: ' + $studentMail;
+$subject = 'Yodapp Meeting';
+$message = $content;
 $headers = 'From: info@yodapp.co.il' . "\r\n" .
     'Reply-To: eranilani@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();

@@ -6,6 +6,7 @@ var Student = Parse.Object.extend("Student");
 var Meeting = Parse.Object.extend("Meeting");
 var mentorMail;
 var studentMail;
+var mailContent;
 
 function saveMentor(category,fullName,job,company,paragraph,img,mail,linkedinLink,linkedinID) {
 	  var mentor = new Mentor();
@@ -128,15 +129,34 @@ function saveUser(facebookID,userName,userEmail){
 }
 
 function createMeeting(){
+    mailContent = document.getElementById("paragraph").value;
     var meeting = new Meeting();
     meeting.set("Student", studentMail );
     meeting.set("Mentor", mentorMail);
+    meeting.set("Content", mailContent);
     meeting.save(null, {
         success: function(meeting) {
             console.log("mail sent from " + studentMail + " to " + mentorMail);
-            window.location = 'success.html';
+            //window.location = 'mailsrv.php?meeting_id='+meeting.id;
+            //window.location = 'mailsrv.php?studentMail=' + studentMail + '&mentorMail=' + mentorMail;
+            sentMail(studentMail,mentorMail,mailContent);
+            window.location = '/success.html'
         }, error: function(meeting, error){
             alert("signup error:" + error.message);
         }
     });
+}
+function sentMail(from,to,content){
+    var data = 'studentMail=' + from + '&mentorMail=' + to + '&con=' + content;
+    var xhttp;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            //cfunc(xhttp);
+           // window.location = '/success.html';
+        }
+    };
+    xhttp.open("POST", "/mailsrv.php", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(data);
 }

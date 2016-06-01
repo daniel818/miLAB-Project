@@ -63,14 +63,17 @@ function searchMentors() {
 
 function becomeMentorBTN() {
     document.getElementById("becomeMentorSection").style.display = "none";
+    document.getElementById("steps").style.display = "none";
     document.getElementById("loginCover").style.display = "block";
     document.getElementById("linkedinSection").style.display="block";
 }
-//mentor form button click
-//$("#createMentorBTN").on("click", saveMentorForm);
+
+
 //become a mentor button click
 $("#becomeMentorSection").find("button").on("click", becomeMentorBTN);
-//the auto complete search in the mentor category
+
+$("#becomeMentorSection1").find("button").on("click", becomeMentorBTN);
+
 
 function isCategoryMentor() {
     var input = document.getElementById("category").value;

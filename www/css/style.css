@@ -358,6 +358,17 @@ input.form-control{
     background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/Calendar-100.png?raw=true);
 }
 
+.mentor-link {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/mentor-link.png?raw=true);
+}
+
+.mentor-newedit {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/mentor-newedit.png?raw=true);
+}
+
+.mentor-letter {
+    background-image: url(https://github.com/daniel818/miLAB-Project/blob/master/www/images/mentor-letter.png?raw=true);
+}
 .marketing-header {
     font-family: Roboto;
     color: #ff3366;
@@ -432,6 +443,12 @@ input.form-control{
 
 .y-input-group {
     display: flex;
+}
+
+.y-imgHowTO {
+    width: 380px;
+    height: auto;
+    margin: auto 3px;
 }
 
 .mentorProfileDiv {

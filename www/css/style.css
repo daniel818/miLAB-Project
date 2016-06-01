@@ -243,13 +243,13 @@ input.form-control{
 }
 
 .carousel-control.right {
-    right: -42px;
+    right: -12%;
     background-image: none;
 
 }
 
 .carousel-control.left {
-    left: -42px;
+    left: -12%;
     background-image: none;
 }
 
